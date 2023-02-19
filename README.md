@@ -10,6 +10,6 @@ Based on:
 
 See the references for more information.
 
-What I tried to do was insert the CSS and the images, converted to base64, inside the HTML file, in such a way that there are no external dependencies. The website works offline without Internet, and the HTML file can be emailed and viewed in an offline browser. It also doesn't use Javascript.
+What I tried to do was put the CSS and the images, converted to base64, inside the HTML file, so that there were no external dependencies. The site works offline without internet, and the HTML file can be emailed and viewed in an offline browser. It also doesn't use Javascript.
 
 It can be downloaded and used offline without losing functionality, or it can also be hosted on a simple regular web server.
