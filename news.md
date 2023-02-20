@@ -1,3 +1,6 @@
+<h2>News</h2>
+<br>
+
 <article>
 <h2 id="20201010a">Blogging with Joe Bloggs
   <time datetime="2020-10-10">10.10.2020</time>
