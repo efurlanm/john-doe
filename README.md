@@ -1,6 +1,6 @@
 # John Doe template without external dependencies
 
-An entire website in a single HTML file that includes CSS, images and content, and no JavaScript.
+An entire website in a single HTML file, which includes CSS, images and content, without JavaScript, which occupies 58 kB.
 
 Based on (see these references for more information):
 
@@ -30,7 +30,7 @@ I also believe that the John Doe template complies with [Jeff Huang's 7 guidelin
 5. Stick with native fonts
    - There are no external fonts and only two font families are used: `font-family: system-ui, sans-serif;`
 6. Obsessively compress your images
-   - All example images contained in the template use webp format converted to base64
+   - All example images contained in the template use webp format converted to base64, and are at the minimum size
 7. Eliminate the broken URL risk
    - At the moment the site is hosted on github which I imagine is stable and will always be up, however using a monitoring service I think is always a good idea. And on the other hand, since it's a single HTML file, it can be downloaded and stored offline, so it should be relatively easy to preserve (I think)
 
