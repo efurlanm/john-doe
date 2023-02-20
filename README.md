@@ -15,12 +15,10 @@ Images were converted using [base64](https://linux.die.net/man/1/base64). The ma
 
 The template contains an example of a website that on the News page has an external link (https://example.com) that appears with an arrow on the right side indicating an external link that can only be viewed in a browser with Internet access.
 
-The News page is subdivided into articles (tag <article>) each containing a post, which can be expanded using more <article>.
+The News page is subdivided into articles (tag `<article>`) each containing a post, which can be expanded using more `<article>`.
 
 ## Files
 
 - john-doe_v0.1.html : original file with some minor fixes like links
-
 - john-doe.html : CSS and images inside the HTML file
-
 - *.md : Markdown files used with MarkText that can be deleted if no longer needed
