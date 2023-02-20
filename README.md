@@ -17,6 +17,23 @@ The template contains an example of a website that on the News page has an exter
 
 The News page is subdivided into articles (tag `<article>`) each containing a post, which can be expanded using more `<article>`.
 
+I also believe that the John Doe template complies with [Jeff Huang's 7 guidelines](https://jeffhuang.com/designed_to_last/) from *This Page is Designed to Last*:
+
+1. Return to vanilla HTML/CSS
+   - Does not have JavaScrip, and passes the https://validator.w3.org/
+2. Don't minimize that HTML
+   - Neither the CSS nor the HTML are minimized, and furthermore an attempt was made to comment out the HTML code
+3. Prefer one page over several
+   - The HTML file is unique and does not have any external references, both the CSS and the images are inside the single file
+4. End all forms of hotlinking
+   - The template has a single external link that is explicit in the example within the News menu option, with the name *Link* that has an arrow indicating an external reference, and can be deleted as it is just an example. Other than that, there is no hotlink or external link, and works offline.
+5. Stick with native fonts
+   - There are no external fonts and only two font families are used: `font-family: system-ui, sans-serif;`
+6. Obsessively compress your images
+   - All example images contained in the template use webp format converted to base64
+7. Eliminate the broken URL risk
+   - At the moment the site is hosted on github which I imagine is stable and will always be up, however using a monitoring service I think is always a good idea. And on the other hand, since it's a single HTML file, it can be downloaded and stored offline, so it should be relatively easy to preserve (I think)
+
 ## Files
 
 - john-doe_v0.1.html : original file with some minor fixes like links
