@@ -37,5 +37,5 @@ The John Doe template complies with [Jeff Huang's 7 guidelines](https://jeffhuan
 ## Files
 
 - john-doe_v0.1.html : original file with some minor fixes like links
-- john-doe.html : CSS and images inside the HTML file
+- john-doe.html : single HTML file without external dependencies
 - *.md : Markdown files used with MarkText that can be deleted if no longer needed
