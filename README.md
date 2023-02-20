@@ -1,6 +1,6 @@
 # John Doe template without external dependencies
 
-An entire website in a single HTML file, which includes CSS, images and content, without JavaScript, which occupies 58 kB.
+An entire website in a single HTML file, which includes CSS, images and content, without JavaScript, which occupies 60 kB.
 
 Based on (see these references for more information):
 
