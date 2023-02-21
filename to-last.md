@@ -14,8 +14,8 @@ Based on [Designed to Last by Jeff Huang](http://jeffhuang.com/designed_to_last/
 
 In addition, I will also include my personal guidelines:
 
-8. It should also work offline without Internet
-9. Single HTML file with no external dependencies
+8. Easy to download for later offline viewing without Internet
+9. Single HTML file without JavaScript or external dependencies
 
 ## Save
 
@@ -26,5 +26,3 @@ As this entire website is contained within a single HTML file with no external d
 If you intend to fork and use this template, please include as much comments and information as possible within the HTML file so that in the future people can easily understand what was done, how it was done, and eventually contribute too.
 
 <footer><a href="#about">← back</a></footer>
-
-
