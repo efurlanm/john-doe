@@ -1,6 +1,6 @@
 # John Doe template without external dependencies
 
-This is my version of the John Doe template by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 60 kB.
+This is my version of the John Doe (JD) template by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 60 kB.
 
 Based on:
 
