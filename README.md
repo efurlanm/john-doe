@@ -1,6 +1,6 @@
 # John Doe template without external dependencies
 
-An entire simple website contained in a single HTML file that includes CSS, images and content, without JavaScript, taking up just 60 kB.
+This is my implementation of the John Doe template by Gregory Cadars. A complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependecies, occupying only 60 kB.
 
 Based on:
 
