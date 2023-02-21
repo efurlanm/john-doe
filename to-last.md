@@ -14,12 +14,12 @@ Based on [Designed to Last by Jeff Huang](http://jeffhuang.com/designed_to_last/
 
 In addition, I will also include my personal guidelines:
 
-8. Easy to download for later offline viewing without Internet
-9. Single HTML file without JavaScript or external dependencies
+8. Keep the HTML well-documented, clean, portable, accessible, and designed to [degrade gracefully](https://www.anybrowser.org/campaign/abdesign.html)
+9. Only one single HTML file without JavaScript or external dependencies
 
 ## Save
 
-As this entire website is contained within a single HTML file with no external dependencies, it is simple to save it to disk for later reading, thus helping to preserve it through an offline copy. To save it, just use the browser's page save option, that's all. After saving, check if it is working by clicking on the file and selecting open in browser. If it doesn't work, maybe you need to turn off some browser add-ons.
+Since the entire website is contained in a single HTML file, it should be simple to save it to disk for later viewing, thus helping to preserve it through an offline copy. To save it, just use your browser's page save option, that's all. After saving, check if it's working by clicking on the file and selecting to open in browser. If that doesn't work, you may need to disable some browser add-ons.
 
 ## Preserve
 

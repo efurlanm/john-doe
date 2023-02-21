@@ -30,7 +30,7 @@ The John Doe template complies with [Jeff Huang's 7 guidelines](https://jeffhuan
 4. End all forms of hotlinking
    - There are no images from other websites, the CSS is part of the file and is not externally linked, it does not use Google Analytics, nor any type of hotlink
 5. Stick with native fonts
-   - There are no external fonts, and only two font families are used: `font-family: system-ui, sans-serif;`
+   - There are no external fonts, and only generic font families are used
 6. Obsessively compress your images
    - All example images contained in the template use webp format (converted to base64), and are at the minimum size
 7. Eliminate the broken URL risk
