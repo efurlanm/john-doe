@@ -39,6 +39,29 @@ officia deserunt mollit anim id est laborum.</p>
 </article>
 ```
 
+And the Markdown equivalent would be:
+
+```markdown
+<article>
+
+<h2 id="20010101">Lorem ipsum
+  <time datetime="2001-01-01">01.01.2001</time></h2>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+commodo consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur.
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+officia deserunt mollit anim id est laborum.
+
+</article>
+```
+The difference is so small that, for simplicity, in this case it might not be worth using Markdown.
+
 The external images were converted to webp format, then transformed into [base64](https://linux.die.net/man/1/base64), and inserted directly into tags within the HTML file.
 
 The example contained in the template has external links that appear with an arrow on the right side, in order to indicate an external link that can only be viewed in a browser with Internet access. This is important, for example, when browsing offline.
