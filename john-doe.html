@@ -604,6 +604,7 @@ label+input+small:after {
 GITHUB-MARKDOWN
 =======================================
 - Source: https://github.com/sindresorhus/github-markdown-css
+- This style is just an example and can be deleted
 */
 
 @media (prefers-color-scheme: dark) {
@@ -1442,7 +1443,7 @@ GITHUB-MARKDOWN
 .markdown-body pre code,
 .markdown-body pre tt {
   display: inline;
-  max-width: auto;
+  max-width: 100%;
   padding: 0;
   margin: 0;
   overflow: visible;
@@ -1894,10 +1895,11 @@ ARTICLE 20010101
 ARTICLE 20001212
 =======================================
 - Source: https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/index.html
+- This article is just an example and can be deleted
 -->
 
-<h2 id="20001212">Lorem ipsum
-  <time datetime="2000-12-12">12.12.2012</time></h2>
+<h2 id="20001212">Github Markdown CSS
+  <time datetime="2000-12-12">12.12.2000</time></h2>
 
 <p>
   Source:
@@ -1908,13 +1910,13 @@ ARTICLE 20001212
 
 <div class="markdown-body">
 
-<h1><a id="user-content-github-markdown-css-demo" class="anchor" href="#github-markdown-css-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Markdown CSS demo</h1>
+<h2><a id="user-content-github-markdown-css-demo" class="anchor" href="#github-markdown-css-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Markdown CSS demo</h1>
 
-<p><a name="user-content-headers"></a></p><a name="user-content-headers">
+<p><a id="user-content-headers"></a></p><a id="user-content-headers">
 
-</a><h2><a name="user-content-headers"></a><a id="user-content-headers" class="anchor" href="#headers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Headers</h2>
+</a><h2><a id="user-content-headers"></a><a id="user-content-headers" class="anchor" href="#headers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Headers</h2>
 
-<pre lang="no-highlight"><code># H1
+<pre><code># H1
 ## H2
 ### H3
 #### H4
@@ -1948,11 +1950,11 @@ Alt-H2
 
 <h2><a id="user-content-alt-h2" class="anchor" href="#alt-h2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alt-H2</h2>
 
-<p><a name="user-content-headers"></a><a name="user-content-emphasis"></a></p><a name="user-content-emphasis">
+<p><a id="user-content-headers"></a><a id="user-content-emphasis"></a></p><a id="user-content-emphasis">
 
-</a><h2><a name="user-content-emphasis"></a><a id="user-content-emphasis" class="anchor" href="#emphasis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Emphasis</h2>
+</a><h2><a id="user-content-emphasis"></a><a id="user-content-emphasis" class="anchor" href="#emphasis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Emphasis</h2>
 
-<pre lang="no-highlight"><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+<pre><code>Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
 
@@ -1969,13 +1971,13 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 <p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
 
-<p><a name="user-content-emphasis"></a><a name="user-content-lists"></a></p><a name="user-content-lists">
+<p><a id="user-content-emphasis"></a><a id="user-content-lists"></a></p><a id="user-content-lists">
 
-</a><h2><a name="user-content-lists"></a><a id="user-content-lists" class="anchor" href="#lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists</h2>
+</a><h2><a id="user-content-lists"></a><a id="user-content-lists" class="anchor" href="#lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists</h2>
 
 <p>(In this example, leading and trailing spaces are shown with with dots: ⋅)</p>
 
-<pre lang="no-highlight"><code>1. First ordered list item
+<pre><code>1. First ordered list item
 2. Another item
 ⋅⋅* Unordered sub-list.
 1. Actual numbers don't matter, just that it's a number
@@ -2126,13 +2128,13 @@ and four to trigger the code block.
 
 <p>To reboot your computer, press <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>del</kbd>.</p>
 
-<p><a name="user-content-lists"></a><a name="user-content-links"></a></p><a name="user-content-links">
+<p><a id="user-content-lists"></a><a id="user-content-links"></a></p><a id="user-content-links">
 
-</a><h2><a name="user-content-links"></a><a id="user-content-links" class="anchor" href="#links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h2>
+</a><h2><a id="user-content-links"></a><a id="user-content-links" class="anchor" href="#links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links</h2>
 
 <p>There are two ways to create links.</p>
 
-<pre lang="no-highlight"><code>[I'm an inline-style link](https://www.google.com)
+<pre><code>[I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
@@ -2151,7 +2153,7 @@ Some text to show that the reference links can follow later.
 [link text itself]: http://www.reddit.com
 </code></pre>
 
-<p><a name="user-content-links"></a><a href="https://www.google.com">I'm an inline-style link</a></p>
+<p><a id="user-content-links"></a><a href="https://www.google.com">I'm an inline-style link</a></p>
 
 <p><a href="https://www.google.com" title="Google's Homepage">I'm an inline-style link with title</a></p>
 
@@ -2165,45 +2167,44 @@ Some text to show that the reference links can follow later.
 
 <p>Some text to show that the reference links can follow later.</p>
 
-<p><a name="user-content-images"></a></p><a name="user-content-images">
+<p><a id="user-content-images"></a></p><a id="user-content-images">
 
-</a><h2><a name="user-content-images"></a><a id="user-content-images" class="anchor" href="#images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Images</h2>
+</a><h2><a id="user-content-images"></a><a id="user-content-images" class="anchor" href="#images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Images</h2>
 
-<pre lang="no-highlight"><code>Here's our logo (hover to see the title text):
+<pre><code>Here's our logo (hover to see the title text):
 
 Inline-style:
-![alt text](<base64image> "Logo Title Text 1")
+![alt text](base64image "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: <base64image> "Logo Title Text 2"
-</code></pre>
+[logo]: base64image "Logo Title Text 2"</code></pre>
 
 <p>Here's our logo (hover to see the title text):</p>
 
-<p>Inline-style:
+<p>Inline-style:</p>
 <div class="dummy48"></div>
-</p>
 
-<p>Reference-style:
+
+<p>Reference-style:</p>
 <div class="dummy48"></div>
-</p>
 
-<p><a name="user-content-images"></a><a name="user-content-code"></a></p><a name="user-content-code">
 
-</a><h2><a name="user-content-code"></a><a id="user-content-code-and-syntax-highlighting" class="anchor" href="#code-and-syntax-highlighting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code and Syntax Highlighting</h2>
+<p><a id="user-content-images"></a><a id="user-content-code"></a></p><a id="user-content-code">
 
-<p><a name="user-content-code">Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and <em>Markdown Here</em> -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the </a><a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+</a><h2><a id="user-content-code"></a><a id="user-content-code-and-syntax-highlighting" class="anchor" href="#code-and-syntax-highlighting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code and Syntax Highlighting</h2>
 
-<pre lang="no-highlight"><code>Inline `code` has `back-ticks around` it.
+<p><a id="user-content-code">Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and <em>Markdown Here</em> -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. <em>Markdown Here</em> supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the </a><a href="http://softwaremaniacs.org/media/soft/highlight/test.html">highlight.js demo page</a>.</p>
+
+<pre><code>Inline `code` has `back-ticks around` it.
 </code></pre>
 
 <p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
 
 <p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.</p>
 
-<pre lang="no-highlight"><code>```javascript
+<pre><code>```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
@@ -2229,13 +2230,13 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 </code></pre>
 
-<p><a name="user-content-tables"></a></p><a name="user-content-tables">
+<p><a id="user-content-tables"></a></p><a id="user-content-tables">
 
-</a><h2><a name="user-content-tables"></a><a id="user-content-tables" class="anchor" href="#tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tables</h2>
+</a><h2><a id="user-content-tables"></a><a id="user-content-tables" class="anchor" href="#tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tables</h2>
 
 <p>Tables aren't part of the core Markdown spec, but they are part of GFM and <em>Markdown Here</em> supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.</p>
 
-<pre lang="no-highlight"><code>Colons can be used to align columns.
+<pre><code>Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -2298,11 +2299,11 @@ Markdown | Less | Pretty
 </tr>
 </tbody></table>
 
-<p><a name="user-content-tables"></a><a name="user-content-blockquotes"></a></p><a name="user-content-blockquotes">
+<p><a id="user-content-tables"></a><a id="user-content-blockquotes"></a></p><a id="user-content-blockquotes">
 
-</a><h2><a name="user-content-blockquotes"></a><a id="user-content-blockquotes" class="anchor" href="#blockquotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blockquotes</h2>
+</a><h2><a id="user-content-blockquotes"></a><a id="user-content-blockquotes" class="anchor" href="#blockquotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blockquotes</h2>
 
-<pre lang="no-highlight"><code>&gt; Blockquotes are very handy in email to emulate reply text.
+<pre><code>&gt; Blockquotes are very handy in email to emulate reply text.
 &gt; This line is part of the same quote.
 
 Quote break.
@@ -2321,13 +2322,13 @@ This line is part of the same quote.</p>
 <p>This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
 </blockquote>
 
-<p><a name="user-content-blockquotes"></a><a name="user-content-html"></a></p><a name="user-content-html">
+<p><a id="user-content-blockquotes"></a><a id="user-content-html"></a></p><a id="user-content-html">
 
-</a><h2><a name="user-content-html"></a><a id="user-content-inline-html-1" class="anchor" href="#inline-html-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inline HTML</h2>
+</a><h2><a id="user-content-html"></a><a id="user-content-inline-html-1" class="anchor" href="#inline-html-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inline HTML</h2>
 
 <p>You can also use raw HTML in your Markdown, and it'll mostly work pretty well.</p>
 
-<pre lang="no-highlight"><code>&lt;dl&gt;
+<pre><code>&lt;dl&gt;
     &lt;dt&gt;Definition list&lt;/dt&gt;
     &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
 
@@ -2344,9 +2345,9 @@ This line is part of the same quote.</p>
     <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
-<p><a name="user-content-html"></a><a name="user-content-hr"></a></p><a name="user-content-hr">
+<p><a id="user-content-html"></a><a id="user-content-hr"></a></p><a id="user-content-hr">
 
-</a><h2><a name="user-content-hr"></a><a id="user-content-horizontal-rule" class="anchor" href="#horizontal-rule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Horizontal Rule</h2>
+</a><h2><a id="user-content-hr"></a><a id="user-content-horizontal-rule" class="anchor" href="#horizontal-rule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Horizontal Rule</h2>
 
 <pre><code>Three or more...
 
@@ -2377,9 +2378,9 @@ Underscores
 
 <p>Underscores</p>
 
-<p><a name="user-content-hr"></a><a name="user-content-lines"></a></p><a name="user-content-lines">
+<p><a id="user-content-hr"></a><a id="user-content-lines"></a></p><a id="user-content-lines">
 
-</a><h2><a name="user-content-lines"></a><a id="user-content-line-breaks" class="anchor" href="#line-breaks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Line Breaks</h2>
+</a><h2><a id="user-content-lines"></a><a id="user-content-line-breaks" class="anchor" href="#line-breaks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Line Breaks</h2>
 
 <p>My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.</p>
 
@@ -2402,20 +2403,20 @@ This line is only separated by a single newline, so it's a separate line in the 
 
 <p>(Technical note: <em>Markdown Here</em> uses GFM line breaks, so there's no need to use MD's two-space line breaks.)</p>
 
-<p><a name="user-content-lines"></a><a name="user-content-videos"></a></p><a name="user-content-videos">
+<p><a id="user-content-lines"></a><a id="user-content-videos"></a></p><a id="user-content-videos">
 
-</a><h2><a name="user-content-videos"></a><a id="user-content-youtube-videos" class="anchor" href="#youtube-videos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Youtube videos</h2>
+</a><h2><a id="user-content-videos"></a><a id="user-content-youtube-videos" class="anchor" href="#youtube-videos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Youtube videos</h2>
 
 <p>They can't be added directly but you can add an image with a link to the video like this:</p>
 
-<pre lang="no-highlight"><code>&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+<pre><code>&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
 " target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
 </code></pre>
 
 <p>Or, in pure Markdown, but losing the image sizing and border:</p>
 
-<pre lang="no-highlight"><code>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+<pre><code>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 </code></pre>
 
 <p>Referencing a bug by #bugID in your git commit links it to the slip. For example #1.</p>
@@ -2432,7 +2433,7 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" checked="checked" disabled="disabled"> foo</li>
 </ul>
 
-<p><a name="user-content-videos">[test]: </a><a href="http://google.com/">http://google.com/</a> "Google"</p>
+<p><a id="user-content-videos">[test]: </a><a href="http://google.com/">http://google.com/</a> "Google"</p>
 
 <h1><a id="user-content-a-heading" class="anchor" href="#a-heading" aria-hidden="true"><span class="octicon octicon-link"></span></a>A heading</h1>
 
@@ -2495,7 +2496,7 @@ markdown.js breaks here again</p>
 <p>Hello <em>world</em>. Here is a <a href="//hello">link</a>.
 And an image
 <a href="/tylerlong/github-markdown-css-demo/blob/master/src" target="_blank">
-<img alt="alt" style="max-width:100%;"></a>.</p>
+<img alt="alt" style="max-width:100%;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>.</p>
 
 <pre><code>Code goes here.
 Lots of it...
@@ -2733,7 +2734,7 @@ can [see the source for it by adding '.text' to the URL][src].</p>
 
 <hr>
 
-<h2 id="user-content-overview"><a id="user-content-overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
+<h2 id="user-content-overview"><a class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
 
 <h3 id="user-content-philosophy"><a id="user-content-philosophy" class="anchor" href="#philosophy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Philosophy</h3>
 
@@ -3470,7 +3471,7 @@ escape it:</p>
 <pre><code>\*this text is surrounded by literal asterisks\*
 </code></pre>
 
-<h3 id="user-content-code"><a id="user-content-code" class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code</h3>
+<h3 id="user-content-code"><a class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code</h3>
 
 <p>To indicate a span of code, wrap it with backtick quotes (<code>`</code>).
 Unlike a pre-formatted code block, a code span indicates code within a
@@ -3729,11 +3730,11 @@ break] with a line-ending space.</p>
 
 <hr>
 
-<hr id="user-content-bar">
+<hr>
 
-<hr id="user-content-bar">
+<hr>
 
-<hr id="user-content-bar">
+<hr>
 
 <div class="highlight highlight-js"><pre><span class="pl-k">var</span> gulp <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>gulp<span class="pl-pds">'</span></span>);
 <span class="pl-k">var</span> myth <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>gulp-myth<span class="pl-pds">'</span></span>);
