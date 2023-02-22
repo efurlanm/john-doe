@@ -1,6 +1,6 @@
 # John Doe HTML Single File Template
 
-This is my version of the John Doe template (JD) by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 60 kB.
+This is my version of the John Doe template (JD) by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 150 kB. 
 
 Based on:
 
@@ -60,6 +60,7 @@ officia deserunt mollit anim id est laborum.
 
 </article>
 ```
+
 The difference is so small that, for simplicity, in this case it might not be worth using Markdown.
 
 The external images were converted to webp format, then transformed into [base64](https://linux.die.net/man/1/base64), and inserted directly into tags within the HTML file.
