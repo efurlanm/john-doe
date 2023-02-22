@@ -23,7 +23,7 @@ For simplicity, the HTML file can be edited directly, for example a post on the 
 <article>
 
 <h2 id="20010101">Lorem ipsum
-  <time datetime="2004-12-12">12.12.2004</time></h2>
+  <time datetime="2001-01-01">01.01.2001</time></h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -42,8 +42,6 @@ officia deserunt mollit anim id est laborum.</p>
 The external images were converted to webp format, then transformed into [base64](https://linux.die.net/man/1/base64), and inserted directly into tags within the HTML file.
 
 The example contained in the template has external links that appear with an arrow on the right side, in order to indicate an external link that can only be viewed in a browser with Internet access. This is important, for example, when browsing offline.
-
-The News page is subdivided into articles (tag `<article>`) each containing a post, which can be expanded.
 
 The John Doe template complies with [Jeff Huang's 7 guidelines](https://jeffhuang.com/designed_to_last/) from *This Page is Designed to Last*:
 
