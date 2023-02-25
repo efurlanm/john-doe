@@ -1,6 +1,6 @@
 # John Doe HTML Single File Template
 
-This is my version of the John Doe template (JD) by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 150 kB. 
+This is my version of the John Doe template (JD) by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 120 kB. 
 
 Based on:
 
