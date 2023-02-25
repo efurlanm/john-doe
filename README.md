@@ -92,4 +92,4 @@ What I find most interesting about JD is its simplicity. Being able to open a fi
 - *.md : Markdown files used with MarkText that can be deleted if no longer needed
 
 <br>
-<p align="right">Last update: 2023-02-25</p>
+<p align="right">Last modified: 2023-02-25</p>
