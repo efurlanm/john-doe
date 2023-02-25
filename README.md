@@ -64,7 +64,7 @@ officia deserunt mollit anim id est laborum.
 
 The difference is so small that, for simplicity, in this case it might not be worth using Markdown.
 
-The external images were converted to webp format, then transformed into [base64](https://linux.die.net/man/1/base64), and inserted directly into tags within the HTML file.
+The external images were converted to the [base64](https://linux.die.net/man/1/base64) [webp](https://developers.google.com/speed/webp) format and inserted into the file as part of the HTML.
 
 The example contained in the template has external links that appear with an arrow on the right side, in order to indicate an external link that can only be viewed in a browser with Internet access. This is important, for example, when browsing offline.
 
@@ -85,7 +85,7 @@ The John Doe template complies with [Jeff Huang's 7 guidelines](https://jeffhuan
 7. Eliminate the broken URL risk
    - At the moment the site is hosted on Github which I think is stable and will always be online, but using a monitoring service is always a good idea. And on the other hand, since it's a single HTML file, it can be easily downloaded and stored offline, so it should be relatively easy to preserve
 
-The main idea of JD I think is being able to open a file using a simple text editor, make all the necessary changes, save, and that's it. If I want to copy some part of another JD to mine, just open the 2 files, copy (Ctrl+V) and paste (Ctrl-+V), save, and it's done. I can also edit and append using html. If I need any additional resources, I use another external software of my choice, which could be, for example, a website with an online app, and I put the result inside the JD. It's all in one place, easy to find, and in the future it will be there, in one place to look.
+The main idea of JD I think is being able to open a file using a simple text editor, make all the necessary changes, save, and that's it. If I want to copy some part of another JD to mine, just open the 2 files, copy (Ctrl+C) and paste (Ctrl-+V), save, and it's done. I can also edit and append using html. If I need any additional resources, I use another external software of my choice, which could be, for example, a website with an online app, and I put the result inside the JD. It's all in one place, easy to find, and in the future it will be there, in one place to look.
 
 ## Files
 

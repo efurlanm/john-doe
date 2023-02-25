@@ -1,6 +1,6 @@
 <h2>Designed To Last</h2>
 
-Based on [Designed to Last by Jeff Huang](http://jeffhuang.com/designed_to_last/) (see this link for more information). Summarizing the 7 guidelines (2023-02-20):
+7 guidelines from [Designed to Last by Jeff Huang](http://jeffhuang.com/designed_to_last/) (2023-02-20):
 
 1. Return to default HTML/CSS
 2. Don't minimize this HTML
@@ -14,7 +14,7 @@ Based on [Designed to Last by Jeff Huang](http://jeffhuang.com/designed_to_last/
 
 In addition, I will also include my personal guidelines:
 
-8. Keep the HTML well-documented, clean, portable, accessible, and designed to [degrade gracefully](https://www.anybrowser.org/campaign/abdesign.html)
+8. Keep the HTML well-documented, clean, and [accessible](https://www.anybrowser.org/campaign/abdesign.html)
 9. Only one single HTML file without JavaScript or external dependencies
 
 ## Save
