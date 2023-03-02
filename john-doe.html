@@ -7,7 +7,11 @@
 <meta name="description" content="Site description">
 
 <!--
-John Doe HTML Single File Template - Version 1.4 - 2023-02-25
+John Doe HTML Single File Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Last edited 2023-03-01
+
 Based on:
   - github.com/cadars/john-doe/
   - github.com/jhvanderschee/zengardenwebsites
@@ -17,7 +21,7 @@ Based on:
 
 GENERAL NOTES
 
-- Main rule: keep comments up to date and clean. Outdated comments are worse than none at all.
+- Main rule: keep comments up to date and clean.
 
 - To edit the complete file I am using Kate (https://kate-editor.org/)
 which has features like code folding which is very useful.
@@ -87,9 +91,10 @@ http://www.catb.org/~esr/html-hell.html .
 }
 
 body {
-  font-size: 1.125em;
+  font-size: 1em;
+  line-height: 1.4;  /* number that will be multiplied with the current font-size to set the line height */
   font-family: system-ui, sans-serif;
-  line-height: 1.4;
+  text-rendering: optimizeLegibility;
   color: var(--textcolor);
   background: var(--bgcolor);
   position: relative;
@@ -116,7 +121,7 @@ section#home {  /* show #home page by default */
   display: block;
 }
 
-/*--- Headers ---------------------------*/
+/*--- Header ----------------------------*/
 header {
   padding: 3vw 3vw 0 3vw;  /* top, right, bottom, left */
   display: flex;
@@ -134,7 +139,19 @@ header h1 {
 }
 
 nav a:not(:last-of-type) {
-  margin-right: 1.5vw;
+  margin-right: 1.5vw;  /* spacing */
+}
+
+/*--- Footer ----------------------------*/
+footer {  /* footer for a document or section */
+  font-size: 0.85em;
+  text-align: right;
+  margin-top: 6em;
+  padding-bottom: 1.25em;
+}
+
+footer a:not(:last-of-type) {
+  margin-right: 1.5vw;  /* spacing */
 }
 
 /*--- General ---------------------------*/
@@ -165,8 +182,8 @@ p,
 ul,
 ol,
 article {  /* paragraphs, unordered and ordered lists */
-  max-width: 60ch; /* Limit line-length to 60 characters */
-  margin-bottom: 0.6em;
+  max-width: 80ch; /* Limit line-length to 80 characters */
+  margin-bottom: 1em;
 }
 
 ul {  /* unordered lists */
@@ -241,13 +258,6 @@ textarea {  /* computer code, multi-line text input control */
 a code {  /* hyperlinks with code */
   color: red;
   opacity: 1; /* 1 is the default (fully opaque) */
-}
-
-footer {  /* footer for a document or section */
-  font-size: 0.85em;
-  text-align: right;
-  margin-top: 6em;
-  padding-bottom: 1.25em;
 }
 
 pre,
@@ -680,7 +690,7 @@ repetition of images, it was decided to place them in this way.
 </head>
 <body>
 
-<header id= "toolbar">
+<header id="toolbar">
 <!--
 =======================================
 TOOLBAR
@@ -691,15 +701,15 @@ something it might be better to do it within a page.
 
 <h1><a href="#home">Site title</a></h1>
 <nav>
-  <a href="#about">About</a>
-  <a href="#news">News</a>
-  <a href="#photos">Photos</a>
-  <a href="#portfolio">Portfolio</a>
+<a href="#about">About</a>
+<a href="#news">News</a>
+<a href="#photos">Photos</a>
+<a href="#portfolio">Portfolio</a>
 </nav>
+
 </header>
 
 <main>
-
 
 <section id="home">
 <!--
@@ -709,7 +719,10 @@ HOME
 -->
 
 <p>This is the homepage, displayed by default.</p>
-<footer>This page is <a href="#to-last">designed to last</a></footer>
+<footer>
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fefurlanm.github.io%2Fjohn-doe.html">Valid HTML</a>
+<a href="#to-last">This page is designed to last</a>
+</footer>
 
 </section>
 
@@ -731,7 +744,6 @@ ABOUT
 
 </section>
 
-
 <section id="news">
 <!--
 =======================================
@@ -750,6 +762,7 @@ ARTICLE 20201010
   <time datetime="2020-10-10">10.10.2020</time></h2>
 <p>One <em>could</em> use this setup to write <del>a blog</del> short updates. For images make sure to use the <code>loading="lazy"</code> attribute, so they get loaded only when needed. <label for="lazy">1</label>
 <input id="lazy" type="checkbox"><small>You might be able to use it for <code>iframe</code> embeds too(?), but maybe just write a link to the Youtube video instead.</small></p>
+
 </article>
 
 
@@ -769,6 +782,7 @@ to <code>code</code></a></p>
 <li><a href="https://example.com">What Science Says About Productivity</a></li>
 <li><a href="https://example.com">Why Your Cat Bites You</a></li>
 </ol>
+
 </article>
 
 
@@ -784,6 +798,7 @@ ARTICLE 20010101
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 </article>
 
 
@@ -2366,7 +2381,6 @@ _   underscore
 
 </section>
 
-
 <section id="photos">
 <!--
 =======================================
@@ -2401,7 +2415,6 @@ that are in the CSS.
 </div>
 
 </section>
-
 
 <section id="portfolio">
 <!--
@@ -2440,7 +2453,6 @@ CSS. It is a better option when the image does not repeat.
 
 </section>
 
-
 <section id="another-page">
 <!--
 =======================================
@@ -2452,7 +2464,6 @@ ANOTHER PAGE
 <footer><a href="#about">← back</a></footer>
 
 </section>
-
 
 <section id="to-last">
 <!--
@@ -2474,7 +2485,6 @@ DESIGNED TO LAST
 <li>Eliminate the risk of broken URL</li>
 </ol>
 <br>
-
 <p>In addition, I will also include my personal guidelines:</p>
 <ol start="8">
 <li>Keep the HTML well-documented, clean, and <a href="https://www.anybrowser.org/campaign/abdesign.html">accessible</a></li>
@@ -2561,4 +2571,5 @@ work, brings an extra complexity which would be interesting to avoid.
 </a>
 
 </body>
+
 </html>
