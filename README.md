@@ -91,5 +91,5 @@ What I find most interesting about JD is its simplicity. Being able to open a fi
 - john-doe.html : single HTML file without external dependencies
 - *.md : Markdown files used with MarkText that can be deleted if no longer needed
 
-
+<br>
 <p align="right">Last edited on 2023-02-25</p>
