@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Site title</title>
 <meta name="description" content="Site description">
@@ -10,7 +11,7 @@
 John Doe HTML Single File Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Last edited 2023-03-01
+Last edited 2023-03-05
 
 Based on:
   - github.com/cadars/john-doe/
@@ -23,35 +24,23 @@ GENERAL NOTES
 
 - Main rule: keep comments up to date and clean.
 
-- To edit the complete file I am using Kate (https://kate-editor.org/)
-which has features like code folding which is very useful.
+- To edit the complete file I am using Kate (https://kate-editor.org/) which has features like code folding which is very useful.
 
-- The html indentation has been suppressed to make it easier to, for example,
-cut and paste from MarkText (the Markdown editor I'm using,
-http://github.com/marktext/marktext).
+- The html indentation has been suppressed to make it easier to, for example, cut and paste from MarkText (the Markdown editor I'm using, http://github.com/marktext/marktext).
 
-- Only some parts were edited with MarkText, which has a copy and paste feature
-that transforms into html format.
+- Only some parts were edited with MarkText, which has a copy and paste feature that transforms into html format.
 
-- All images were first converted to webp format, and then transformed into
-base64 to be inserted inline in this file.
+- All images were first converted to webp format, and then transformed into base64 to be inserted inline in this file.
 
-- Always validate the HTML file using the W3C Markup Validation Service
-https://validator.w3.org/ .
+- Always validate the HTML file using the W3C Markup Validation Service https://validator.w3.org/ .
 
-- It's always a good idea to format your code, or part of it, to make it
-readable, using services like https://codebeautify.org/htmlviewer/ .
+- It's always a good idea to format your code, or part of it, to make it readable, using services like https://codebeautify.org/htmlviewer/ .
 
-- Some of the main html resources used (nav, section, article, header, and
-others), are described at
-https://www.w3schools.com/html/html5_semantic_elements.asp .
+- Some of the main html resources used (nav, section, article, header, and others), are described at https://www.w3schools.com/html/html5_semantic_elements.asp .
 
-- The Hugo-coder theme (https://github.com/luizdepra/hugo-coder/) is similar to
-the theme used, and several ideas can be used.
+- As an example, the Hugo-coder theme (https://github.com/luizdepra/hugo-coder/) is similar to the theme used, and several ideas can be used.
 
-- The main idea of this template is to abuse the comments to try to make it as
-readable as possible and easy to maintain, but it is necessary to take some
-precautions: https://app.works/good-comments-vs-bad-comments/ .
+- The main idea of this template is to abuse the comments to try to make it as readable as possible and easy to maintain, but it is necessary to take some precautions: https://app.works/good-comments-vs-bad-comments/ .
 
 - There are other specific notes in the middle of the html below.
 -->
@@ -70,7 +59,7 @@ http://www.catb.org/~esr/html-hell.html .
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* turn on the website padding and border */
   /*
   Color scheme.
   Some places to find colors:
@@ -91,14 +80,14 @@ http://www.catb.org/~esr/html-hell.html .
 }
 
 body {
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.4;  /* number that will be multiplied with the current font-size to set the line height */
   font-family: system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   color: var(--textcolor);
   background: var(--bgcolor);
-  position: relative;
-  max-width: 64em;  /* remove this for a full-width layout */
+  position: relative;  /* turn on the website padding and border */
+  max-width: 60em;  /* remove this for a full-width layout */
   margin: 0 auto;  /* centers the layout */
 }
 
@@ -110,7 +99,7 @@ section {
   top: 0;
   min-height: 100vh;
   width: 100%;
-  background: var(--bgcolor);
+  background: var(--bgcolor);  /* hide #home page */
 }
 
 section:target {  /* this is the trick to show (one) pages */
@@ -132,10 +121,35 @@ header {
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 1.111111em;
   flex: 1;  /* pushes nav to the right */
   white-space: nowrap;
   padding: 0 5vw 0.5em 0;  /* top, right, bottom, left */
+}
+
+section h1 {  /* headings */
+  font-size: 1.111111em;
+  margin: 0 0 1em 0;
+}
+
+/* font-weight: https://cssreference.io/property/font-weight/ */
+h2,
+h3,
+h4 {  /* headings */
+  font-weight: 600;  /* semi bold */
+  margin: 1.6em 0 0.6em 0;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.944444em;
 }
 
 nav a:not(:last-of-type) {
@@ -146,8 +160,7 @@ nav a:not(:last-of-type) {
 footer {  /* footer for a document or section */
   font-size: 0.85em;
   text-align: right;
-  margin-top: 6em;
-  padding-bottom: 1.25em;
+  padding-top: 4em;
 }
 
 footer a:not(:last-of-type) {
@@ -162,20 +175,6 @@ a {  /* hyperlinks */
 
 a:hover {
   border-bottom: 1px solid;
-}
-
-section h1 {  /* headings */
-  font-size: 1em;
-  margin: 0 0 1em 0;
-}
-
-/* font-weight: https://cssreference.io/property/font-weight/ */
-h2,
-h3,
-h4 {  /* headings */
-  font-size: 1em;
-  font-weight: 600;  /* semi bold */
-  margin: 1.6em 0 0.6em 0;
 }
 
 p,
@@ -798,8 +797,20 @@ ARTICLE 20010101
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+
+
+<article>
+
+<h2>Abstract</h2>
+<p>We introduce physics informed neural networks – neural networks that are trained to solve supervised learning tasks while respecting any given law of physics described by general nonlinear partial differential equations. We present our developments in the context of solving two main classes of problems: data-driven solution and data-driven discovery of partial differential equations. Depending on the nature and arrangement of the available data, we devise two distinct classes of algorithms, namely continuous time and discrete time models. The resulting neural networks form a new class of data-efficient universal function approximators that naturally encode any underlying physical laws as prior information. In the first part, we demonstrate how these networks can be used to infer solutions to partial differential equations, and obtain physics-informed surrogate models that are fully differentiable with respect to all input coordinates and free parameters. In the second part, we focus on the problem of data-driven discovery of partial differential equations.</p>
 
 </article>
+
+
+
+
+
 
 
 <article>

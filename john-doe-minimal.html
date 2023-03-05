@@ -1,136 +1,112 @@
-<!-- Minimal example. Last edited 2023-03-01 -->
+<!--Minimal example. Last edited 2023-03-05-->
 <!DOCTYPE html>
-<head>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Site title</title>
-  <style id="css">
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      --textcolor: #121212;  /*  very dark shade of gray (X11 gray7) */
-      --bgcolor: #fff;  /* white */
-      --highlight: #0000EE;  /* blue */
-    }
-    body {
-      font-size: 1em;
-      line-height: 1.4;  /* number that will be multiplied with the current font-size to set the line height */
-      font-family: system-ui, sans-serif;
-      text-rendering: optimizeLegibility;
-      color: var(--textcolor);
-      background: var(--bgcolor);
-      position: relative;
-      max-width: 64em;
-      /* remove this for a full-width layout */
-      margin: 0 auto;
-      /* centers the layout */
-    }
-    section {  /* Sections(pages) */
-      display: none;
-      /* this is the trick to hide (all) pages */
-      padding: calc(6em + 3vw) 3vw 8vw 3vw;
-      /* top, right, bottom, left */
-      position: absolute;
-      top: 0;
-      min-height: 100vh;
-      width: 100%;
-      background: var(--bgcolor);
-    }
-    section:target {
-      /* this is the trick to show (one) pages */
-      display: block;
-    }
-    section#home {
-      /* show #home page by default */
-      display: block;
-    }
-    header {  /* Headers */
-      padding: 3vw 3vw 0 3vw;
-      /* top, right, bottom, left */
-      display: flex;
-      flex-wrap: wrap;
-      position: absolute;
-      width: 100%;
-      z-index: 2;
-    }
-    header h1 {
-      font-size: 1em;
-      flex: 1;
-      /* pushes nav to the right */
-      white-space: nowrap;
-      padding: 0 5vw 0.5em 0;
-      /* top, right, bottom, left */
-    }
-    nav a:not(:last-of-type) {
-      margin-right: 1.5vw;
-    }
-    a {  /* hyperlinks */
-      text-decoration: none;
-      color: var(--highlight);
-    }
-    a:hover {
-      border-bottom: 1px solid;
-    }
-    section h1 {  /* section headings */
-      font-size: 1em;
-      margin: 0 0 1em 0;
-    }
-    p, article {  /* paragraphs, unordered and ordered lists */
-      max-width: 80ch;  /* Limit line-length to 80 characters */
-      margin-bottom: 1em;
-    }
-    footer {  /* footer for a document or section */
-      font-size: 0.85em;
-      text-align: right;
-      margin-top: 6em;
-      padding-bottom: 1.25em;
-    }
-    @media only screen and (max-width: 680px) {
-      body {  /* Smaller screens */
-        font-size: 1em;
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Site title</title>
+    <style id="css">
+      * {
+        box-sizing: border-box;  /* turn on the website padding and border */
       }
-    }
-    @media only screen and (max-width: 540px) {
-      nav {  /* Fix for older webkit versions */
+      body {
+        position: relative;  /* turn on the website padding and border */
+        max-width: 64em;  /* remove this for a full-width layout */
+        margin: 0 auto;  /* centers the layout */
+      }
+      section {  /* Sections(pages) */
+        display: none;  /* this is the trick to hide (all) pages */
+        padding: calc(6em + 3vw) 3vw 8vw 3vw;  /* top, right, bottom, left */
+        position: absolute;
+        top: 0;
+        min-height: 100vh;
         width: 100%;
+        background: #fff;  /* hide #home page */
       }
-    }
-  </style>
-</head>
-<body>
-  <header id="toolbar">
-    <h1>
-      <a href="#home">Site title</a>
-    </h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#photos">Photos</a>
-      <a href="#portfolio">Portfolio</a>
-    </nav>
-  </header>
-  <main>
-    <section id="home">
-      <p>This is the homepage, displayed by default.</p>
-    </section>
-    <section id="about">
-      <p>This is the about page. <a href="#another-page">This is a link to another page</a>. </p>
-    </section>
-    <section id="news">
-      <p>Loren Ipsum 1.</p>
-    </section>
-    <section id="photos">
-      <p>Loren Ipsum 2.</p>
-    </section>
-    <section id="portfolio">
-      <p>Loren Ipsum 3.</p>
-    </section>
-    <section id="another-page">
-      <p>This page is not referenced in the menu, yet it exists.</p>
-      <footer>
-        <a href="#about">← back</a>
-      </footer>
-    </section>
-  </main>
-</body>
+      section:target {  /* this is the trick to show (one) pages */
+        display: block;
+      }
+      section#home {  /* show #home page by default */
+        display: block;
+      }
+      header {  /* Headers */
+        padding: 3vw 3vw 0 3vw;  /* top, right, bottom, left */
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 100%;
+        z-index: 2;  /* https://www.w3schools.com/cssref/pr_pos_z-index.php */
+      }
+      header h1 {
+        font-size: 1em;
+        flex: 1;  /* pushes nav to the right */
+        white-space: nowrap;
+        padding: 0 5vw 0.5em 0; /* top, right, bottom, left */
+      }
+      nav a:not(:last-of-type) {
+        margin-right: 1.5vw;
+      }
+      a {  /* hyperlinks */
+        text-decoration: none;
+      }
+      a:hover {
+        border-bottom: 1px solid;
+      }
+      p, article {  /* paragraphs, unordered and ordered lists */
+        max-width: 80ch;  /* Limit line-length to 80 characters */
+        margin-bottom: 1em;
+      }
+      footer {  /* footer for a document or section */
+        font-size: 0.85em;
+        text-align: right;
+        padding-top: 4em;
+      }
+      @media only screen and (max-width: 680px) {
+        body {  /* Smaller screens */
+          font-size: 1em;
+        }
+      }
+      @media only screen and (max-width: 540px) {
+        nav {  /* Fix for older webkit versions */
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="toolbar">
+      <h1>
+        <a href="#home">Site title</a>
+      </h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#photos">Photos</a>
+        <a href="#portfolio">Portfolio</a>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <p>This is the homepage, displayed by default.</p>
+      </section>
+      <section id="about">
+        <p>This is the about page. <a href="#another-page">This is a link to another page</a>. </p>
+      </section>
+      <section id="news">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+      <section id="photos">
+        <p>Loren Ipsum 2.</p>
+      </section>
+      <section id="portfolio">
+        <p>Loren Ipsum 3.</p>
+      </section>
+      <section id="another-page">
+        <p>This page is not referenced in the menu, yet it exists.</p>
+        <footer>
+          <a href="#about">← back</a>
+        </footer>
+      </section>
+    </main>
+  </body>
 </html>
