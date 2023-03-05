@@ -79,7 +79,7 @@ The John Doe template complies with Jeff Huang's 7 guidelines from [This Page is
 5. Stick with native fonts
    - There are no external fonts, and only generic font families are used
 6. Obsessively compress your images
-   - All example images contained in the template use webp format (converted to base64), and are at the minimum size
+   - All example images contained in the template use base64 webp format, and are at the minimum size
 7. Eliminate the broken URL risk
    - At the moment the site is hosted on Github which I think is stable and will always be online, but using a monitoring service is always a good idea. And on the other hand, since it's a single HTML file, it can be easily downloaded and stored offline, so it should be relatively easy to preserve
 
