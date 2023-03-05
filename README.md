@@ -81,7 +81,7 @@ The John Doe template complies with Jeff Huang's 7 guidelines from [This Page is
 6. Obsessively compress your images
    - All example images contained in the template use base64 webp format, and are at the minimum size
 7. Eliminate the broken URL risk
-   - At the moment the site is hosted on Github which I think is stable and will always be online, but using a monitoring service is always a good idea. And on the other hand, since it's a single HTML file, it can be easily downloaded and stored offline, so it should be relatively easy to preserve
+   - At the moment the site is hosted on Github which I think is stable and will always be online, but using a [monitoring service](https://geekflare.com/monitor-website-uptime/) is always a good idea. And on the other hand, since it's a single HTML file, it can be easily downloaded and stored offline, so it should be relatively easy to preserve
 
 What I find most interesting about JD is its simplicity. Being able to open a file using a simple text editor, make all the necessary changes, save and that's it. If I want to copy some part of another JD to mine, just open the 2 files, copy (Ctrl+C) and paste (Ctrl+V), save and that's it. And in the future when I need to use the file again, everything is in there, easy to find.
 
