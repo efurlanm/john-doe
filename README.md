@@ -5,7 +5,7 @@
 This is my version of the John Doe template by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies. 
 
 * Template: https://efurlanm.github.io/john-doe
-* Example: https://efurlanm.github.io/john-doe/profile.html
+* Example: https://efurlanm.github.io/john-doe/profile.html ([based on](https://nediyana.github.io/))
 
 
 Based on:
