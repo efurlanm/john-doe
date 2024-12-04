@@ -4,14 +4,13 @@
 <meta charset="utf-8">
 <!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Site title</title>
+<title>Single file HTML template</title>
 <meta name="description" content="Site description">
 
 <!--
-John Doe HTML Single File Template
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Last edited 2023-03-05
+Single File HTML Template
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Last edited: 2024-12-04
 
 Based on:
   - github.com/cadars/john-doe/
@@ -30,7 +29,7 @@ GENERAL NOTES
 
 - Only some parts were edited with MarkText, which has a copy and paste feature that transforms into html format.
 
-- All images were first converted to webp format, and then transformed into base64 to be inserted inline in this file.
+- All images were first converted to base64 to be inserted inline in this file.
 
 - Always validate the HTML file using the W3C Markup Validation Service https://validator.w3.org/ .
 
@@ -40,13 +39,13 @@ GENERAL NOTES
 
 - As an example, the Hugo-coder theme (https://github.com/luizdepra/hugo-coder/) is similar to the theme used, and several ideas can be used.
 
-- The main idea of this template is to abuse the comments to try to make it as readable as possible and easy to maintain, but it is necessary to take some precautions: https://app.works/good-comments-vs-bad-comments/ .
+- The main idea of this template is to try to make it as readable as possible and easy to maintain, but it is necessary to take some precautions: https://app.works/good-comments-vs-bad-comments/ .
 
 - There are other specific notes in the middle of the html below.
 -->
 
-<style id="css">
-/*
+
+<!--
 =======================================
 CSS
 =======================================
@@ -54,23 +53,19 @@ CSS
 - Always check that it works well on mobile devices and other browsers.
 - A page that I think is important to read before messing with CSS is
 http://www.catb.org/~esr/html-hell.html .
-*/
+-->
+<style id="css">
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;  /* turn on the website padding and border */
-  /*
-  Color scheme.
-  Some places to find colors:
+  /* Color scheme. Some places to find colors:
     https://encycolorpedia.com
-    https://www.w3schools.com/colors/
-  The blue color chosen is the one found in the HTML5 specification:
-    https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3 .
-  */
-  --textcolor: #121212;  /*  very dark shade of gray (X11 gray7) */
+    https://www.w3schools.com/colors/ */
+  --textcolor: #121212;  /* very dark shade of gray (X11 gray7) */
   --bgcolor: #fff;  /* white */
-  --highlight: #0000EE;  /* blue */
+  --highlight: #2749c9;  /* Blue Blue Color */
   /* for tables: */
   --color-border-default: #d0d7de;
   --color-canvas-default: #ffffff;
@@ -79,77 +74,91 @@ http://www.catb.org/~esr/html-hell.html .
   --color-border-muted: hsla(210,18%,87%,1);
 }
 
+@media (prefers-color-scheme: dark) {
+  * {
+    --textcolor: #dadada;
+    --bgcolor: #141414;
+    --highlight: #ffc400;
+  }
+}
+
 body {
-  font-size: 1.125em;
-  line-height: 1.4;  /* number that will be multiplied with the current font-size to set the line height */
+  font-size: 1.125em;  /* 18px */
+  line-height: 1.5;  /* number that will be multiplied with the current font-size to set the line height */
   font-family: system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   color: var(--textcolor);
   background: var(--bgcolor);
   position: relative;  /* turn on the website padding and border */
-  max-width: 60em;  /* remove this for a full-width layout */
+  max-width: 64em;  /* remove this for a full-width layout */
   margin: 0 auto;  /* centers the layout */
 }
 
 /*--- Sections(pages) -------------------*/
-section {
-  display: none;  /* this is the trick to hide (all) pages */
-  padding: calc(6em + 3vw) 3vw 8vw 3vw;  /* top, right, bottom, left */
-  position: absolute;
-  top: 0;
-  min-height: 100vh;
-  width: 100%;
-  background: var(--bgcolor);  /* hide #home page */
-}
+
+/* This is the trick to show (one) pages */
 
 section:target {  /* this is the trick to show (one) pages */
   display: block;
 }
 
+section:target ~ section:not(#random), section {
+  display: none;  /* this is the trick to hide (all) pages */
+  padding: calc(6em + 5vw) 5vw 8vw 5vw;
+}
+
+/* must be not the first one (at least one section before it) */
 section#home {  /* show #home page by default */
   display: block;
 }
 
 /*--- Header ----------------------------*/
+
 header {
-  padding: 3vw 3vw 0 3vw;  /* top, right, bottom, left */
+  padding: 5vw 5vw 0 5vw;  /* top, right, bottom, left */
   display: flex;
   flex-wrap: wrap;
   position: absolute;
   width: 100%;
-  z-index: 2;
-}
-
-header h1 {
-  font-size: 1.111111em;
-  flex: 1;  /* pushes nav to the right */
-  white-space: nowrap;
-  padding: 0 5vw 0.5em 0;  /* top, right, bottom, left */
-}
-
-section h1 {  /* headings */
-  font-size: 1.111111em;
-  margin: 0 0 1em 0;
+  z-index: 2;  /* www.w3schools.com/cssref/pr_pos_z-index.php */
 }
 
 /* font-weight: https://cssreference.io/property/font-weight/ */
-h2,
-h3,
-h4 {  /* headings */
-  font-weight: 600;  /* semi bold */
-  margin: 1.6em 0 0.6em 0;
+header h1 {
+  font-size: 1.75em;
+  font-weight: 700;
+  flex: 1;  /* pushes nav to the right */
+  white-space: nowrap;
+  padding: 0 5vw 0.3em 0; /* top, right, bottom, left */
+}
+
+section h1 {  /* section heading */
+  font-size: 1.75em;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.54);
+  margin: 0 0 0.57143em 0; /* top, right, bottom, left */
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.87);
+  /* 1.6em 0 0.6em 0 */
+  margin: 1.666667em 0 0.666667em 0;  /*top,right,bottom,left */
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 1.6em 0 0.8em 0;  /*top, right, bottom, left */
 }
 
 h4 {
-  font-size: 0.944444em;
+  font-size: 1em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 1em 0 1em 0;  /*top, right, bottom, left */
 }
 
 nav a:not(:last-of-type) {
@@ -157,8 +166,9 @@ nav a:not(:last-of-type) {
 }
 
 /*--- Footer ----------------------------*/
+
 footer {  /* footer for a document or section */
-  font-size: 0.85em;
+  font-size: 0.888889em;
   text-align: right;
   padding-top: 4em;
 }
@@ -168,6 +178,7 @@ footer a:not(:last-of-type) {
 }
 
 /*--- General ---------------------------*/
+
 a {  /* hyperlinks */
   text-decoration: none;
   color: var(--highlight);
@@ -177,11 +188,8 @@ a:hover {
   border-bottom: 1px solid;
 }
 
-p,
-ul,
-ol,
-article {  /* paragraphs, unordered and ordered lists */
-  max-width: 80ch; /* Limit line-length to 80 characters */
+p, ul, ol, article {  /* paragraphs, unordered and ordered lists */
+  max-width: 90ch; /* Limit line-length to 80 characters */
   margin-bottom: 1em;
 }
 
@@ -197,18 +205,16 @@ li {  /* list item */
   margin-bottom: 0.2em;
 }
 
-ul,
-ol {  /* unordered and ordered lists */
+ul, ol {  /* unordered and ordered lists */
   padding-left: 2ch;
 }
 
-b,
-strong {  /* bold */
+b, strong {  /* bold */
   font-weight: 600;  /* semi bold */
 }
 
 small {
-  font-size: 0.85em;
+  font-size: 0.888889em;
 }
 
 hr {  /* horizontal rule */
@@ -237,18 +243,14 @@ blockquote:before {
   opacity: 0.2;
 }
 
-img,
-svg,
-video,
-audio {
+img, svg, video, audio {
   display: block;
   max-width: 100%;
   height: auto;
   fill: currentColor;
 }
 
-code,
-textarea {  /* computer code, multi-line text input control */
+code, textarea {  /* computer code, multi-line text input control */
   font-family: ui-monospace, monospace;
   font-size: 1em;
   opacity: 0.7;
@@ -259,9 +261,8 @@ a code {  /* hyperlinks with code */
   opacity: 1; /* 1 is the default (fully opaque) */
 }
 
-pre,
-textarea {  /* for code samples */
-  font-size: 0.9em;
+pre, textarea {  /* for code samples */
+  font-size: 0.888889em;
   color: inherit;
   line-height: inherit;
   padding: 0.6em 0.9em;  /* top and bottom, right and left */
@@ -278,6 +279,7 @@ textarea {  /* for code samples */
 }
 
 /*--- Tables ----------------------------*/
+
 /* Adapted from: https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown.css */
 
 hr::before {
@@ -293,7 +295,7 @@ hr::after {
 
 table {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 1em;
   border-spacing: 0;
   border-collapse: collapse;
   display: block;
@@ -302,8 +304,7 @@ table {
   overflow: auto;
 }
 
-td,
-th {
+td, th {
   padding: 0;
 }
 
@@ -311,8 +312,7 @@ table th {
   font-weight: 600;  /* semi bold */
 }
 
-table th,
-table td {
+table th, table td {
   padding: 6px 13px;  /* top and bottom, right and left */
   border: 1px solid var(--color-border-default);
 }
@@ -331,11 +331,12 @@ table img {
 }
 
 /*--- Inline footnotes ------------------*/
+
 label {
   cursor: pointer;
   vertical-align: super;
   line-height: 1;
-  font-size: 0.75em;
+  font-size: 0.888889em;
   padding-left: 0.1em;
 }
 
@@ -351,8 +352,7 @@ label:after {
   content: "]";
 }
 
-label + input,
-label + input + small {
+label + input, label + input + small {
   display: none;
 }
 
@@ -362,13 +362,14 @@ input:checked + small {
 }
 
 /*--- Figures ---------------------------*/
+
 figure {
   margin: 2em 0 1.5em 0;
 }
 
 figure figcaption {
   margin: 0.8em 0 0 0;
-  font-size: 0.85em;
+  font-size: 0.888889em;
   opacity: 0.7;
 }
 
@@ -376,16 +377,19 @@ section:target iframe {
   visibility: visible;
 }
 
-/*--- External links --------------------
- ::after creates a pseudo-element used to add cosmetic content.
- See: https://developer.mozilla.org/en-US/docs/Web/CSS/::after . */
+/*--- External links --------------------*/
+
+/* ::after creates a pseudo-element used to add cosmetic content.
+   See: https://developer.mozilla.org/en-US/docs/Web/CSS/::after . */
+ 
 a[href*="//"]:after
 {
+  font-size: 0.888889em;
   font-weight: 300;  /* light */
-  font-size: 0.85em;
-  content: "\2197"; /* top right arrow: ↗ */
   color: var(--textcolor);
-  opacity: 0.25;
+  opacity: 0.5;
+  /* \2197 ↗ 🔗 */
+  content: "↗"; /* top right arrow: ↗ */
 }
 
 a[href*="//"]:hover:after
@@ -394,61 +398,65 @@ a[href*="//"]:hover:after
   opacity: 1;
 }
 
-/*--- File links ------------------------*/
-a:before {
-  font-size: 0.7em;
-  margin-right: 0.4em;
-}
+/*--- Local links -----------------------*/
 
 /* ::before creates a pseudo-element used to add cosmetic content.
   See: https://developer.mozilla.org/en-US/docs/Web/CSS/::before .
   Add more filetypes here if you want. */
+  
+a:before {
+  font-size: 0.75em;
+  font-weight: 300;  /* light */
+  color: var(--textcolor);
+  opacity: 0.5;
+  margin-right: 0.4em;
+}
+
 a[href$=".pdf"]:before {
-  content: "PDF";
+  content: "🔗PDF";
 }
 
 a[href$=".txt"]:before {
-  content: "TXT";
+  content: "🔗TXT";
 }
 
 a[href$=".mp3"]:before {
-  content: "MP3";
+  content: "🔗MP3";
 }
 
 a[href$=".zip"]:before {
-  content: "ZIP";
+  content: "🔗ZIP";
 }
 
 a[href$=".rar"]:before {
-  content: "RAR";
+  content: "🔗RAR";
 }
 
-a[href$=".webp"]:before,
-a[href$=".jpeg"]:before,
-a[href$=".jpg"]:before,
-a[href$=".gif"]:before,
-a[href$=".png"]:before {
-  content: "IMG";
+a[href$=".webp"]:before, a[href$=".jpeg"]:before, a[href$=".jpg"]:before, a[href$=".gif"]:before, a[href$=".png"]:before {
+  content: "🔗IMG";
 }
 
 /*--- News ------------------------------*/
+
 article + article {
   margin-top: 4em;
 }
 
 article h2 {
+  font-size: 1.5em;
   font-weight: bold; /* 700 */
   margin: 0 0 1em 0;
 }
 
 article time {
+  font-size: 0.777778em;
   margin-left: 0.6em;
-  font-size: 0.8em;
   font-weight: normal; /* 400 */
   opacity: 0.7;
 }
 
 /*--- Images Grid -----------------------*/
+
 .grid {
   display: grid;
   grid-gap: 5vmin; /* 150px = minimum image size */
@@ -484,6 +492,7 @@ article time {
 }
 
 /*--- Slideshow -------------------------*/
+
 .slides {
   position: fixed;
   top: 0;
@@ -503,7 +512,6 @@ article time {
   align-content: center;
   scroll-snap-align: center;
 }
-
 
 .slides figure img {  /* fit the image (zoom) to the window */
   color: red;
@@ -525,14 +533,10 @@ article time {
 }
 
 /*--- Lightbox --------------------------*/
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .lightbox {
@@ -574,10 +578,10 @@ article time {
 }
 
 .lightbox:target:after {  /* × to close */
-  content: "\00D7";
-  position: fixed;
   font-size: 2em;
   font-weight: 200; /* extra light */
+  content: "\00D7";
+  position: fixed;
   line-height: 0;
   top: 0.75em;
   right: 0.5em;
@@ -585,23 +589,20 @@ article time {
 }
 
 /*--- Smaller screens -------------------*/
+
 @media only screen and (max-width: 680px) {
-  body {
-    font-size: 1em;
-  }
+  body { font-size: 1em; }
 }
 
 /* Fix for older webkit versions, like old iPhones */
 @media only screen and (max-width: 540px) {
-  nav {  /* nav -> toolbar */
-    width: 100%;
-  }
+  nav { width: 100%; }  /* nav -> toolbar */
 }
 
 </style>
 
-<style id="images">
-/*
+
+<!--
 =======================================
 IMAGES
 =======================================
@@ -609,7 +610,8 @@ IMAGES
 directly into the corresponding tags. Only in this specific case, as there was
 repetition of images, it was decided to place them in this way.
 - Some browsers may have problems with this approach, so it's best to avoid.
-*/
+-->
+<style id="images">
 
 .webp48{
   width: 48px;
@@ -687,9 +689,10 @@ repetition of images, it was decided to place them in this way.
 </style>
 
 </head>
+
+
 <body>
 
-<header id="toolbar">
 <!--
 =======================================
 TOOLBAR
@@ -697,7 +700,7 @@ TOOLBAR
 - The idea here is to try to keep it as simple as possible, if you have to add
 something it might be better to do it within a page.
 -->
-
+<header id="toolbar">
 <h1><a href="#home">Site title</a></h1>
 <nav>
 <a href="#about">About</a>
@@ -705,57 +708,40 @@ something it might be better to do it within a page.
 <a href="#photos">Photos</a>
 <a href="#portfolio">Portfolio</a>
 </nav>
-
 </header>
+
 
 <main>
 
-<section id="home">
-<!--
-=======================================
-HOME
-=======================================
--->
 
-<p>This is the homepage, displayed by default.</p>
-<footer>
-<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fefurlanm.github.io%2Fjohn-doe.html">Valid HTML</a>
-<a href="#to-last">This page is designed to last</a>
-</footer>
-
-</section>
-
-
-<section id="about">
 <!--
 =======================================
 ABOUT
 =======================================
 -->
+<section id="about">
 
 <p>This is the about page. <a href="#another-page">This is a link to another page</a>.</p>
-<figure>
+<!--<figure>
   <a href="#img-about">
     <img loading="lazy" alt="webp600x300" class="webp600x300" src="data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==">
   </a>
   <figcaption>Example of an image with a link to a larger version.</figcaption>
-</figure>
+</figure>-->
 
 </section>
 
-<section id="news">
+
 <!--
 =======================================
 NEWS
 =======================================
 -->
+<section id="news">
 
+
+<!-- ARTICLE 20201010 -->
 <article>
-<!--
-=======================================
-ARTICLE 20201010
-=======================================
--->
 
 <h2 id="20201010">Blogging with Joe Bloggs
   <time datetime="2020-10-10">10.10.2020</time></h2>
@@ -765,12 +751,8 @@ ARTICLE 20201010
 </article>
 
 
+<!-- ARTICLE 20041212 -->
 <article>
-<!--
-=======================================
-ARTICLE 20041212
-=======================================
--->
 
 <h2 id="20041212">Why Your Cat Bites You
   <time datetime="2004-12-12">12.12.2004</time></h2>
@@ -779,48 +761,39 @@ to <code>code</code></a></p>
 <ol>
 <li><a href="https://example.com/pdf.pdf">The Complete Insider’s Guide to Penny Stocks</a></li>
 <li><a href="https://example.com">What Science Says About Productivity</a></li>
-<li><a href="https://example.com">Why Your Cat Bites You</a></li>
+<li><a href="https://example.com/jpg.jpg">Why Your Cat Bites You</a></li>
 </ol>
 
 </article>
 
 
+<!-- ARTICLE 20010101 -->
 <article>
-<!--
-=======================================
-ARTICLE 20010101
-=======================================
--->
 
 <h2 id="20010101">Lorem ipsum
   <time datetime="2001-01-01">01.01.2001</time></h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
 </article>
 
 
+<!-- ARTICLE 20010101 -->
 <article>
 
-<h2>Abstract</h2>
+<h2 id="20010101">Lorem ipsum
+  <time datetime="2001-01-01">01.01.2001</time></h2>
+<h3>Abstract</h3>
 <p>We introduce physics informed neural networks – neural networks that are trained to solve supervised learning tasks while respecting any given law of physics described by general nonlinear partial differential equations. We present our developments in the context of solving two main classes of problems: data-driven solution and data-driven discovery of partial differential equations. Depending on the nature and arrangement of the available data, we devise two distinct classes of algorithms, namely continuous time and discrete time models. The resulting neural networks form a new class of data-efficient universal function approximators that naturally encode any underlying physical laws as prior information. In the first part, we demonstrate how these networks can be used to infer solutions to partial differential equations, and obtain physics-informed surrogate models that are fully differentiable with respect to all input coordinates and free parameters. In the second part, we focus on the problem of data-driven discovery of partial differential equations.</p>
 
 </article>
 
 
-
-
-
-
-
-<article>
-<!--
-=======================================
-ARTICLE 20001212
-=======================================
+<!-- ARTICLE 20001212
 - Source: https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/index.html
-- This article is just an example and can be deleted
--->
+- This article is just an example -->
+<article>
 
 <h2 id="20001212">Github Markdown CSS <time datetime="2000-12-12">12.12.2000</time></h2>
 <p>Adapted from: <a href="https://github.com/sindresorhus/github-markdown-css"> https://github.com/sindresorhus/github-markdown-css</a></p>
@@ -2392,7 +2365,9 @@ _   underscore
 
 </section>
 
-<section id="photos">
+
+
+
 <!--
 =======================================
 PHOTOS
@@ -2404,6 +2379,7 @@ inserted directly into the following tags.
 - The following images are single pixel, only to trigger the background images
 that are in the CSS.
 -->
+<section id="photos">
 
 <p>An example of a photo gallery with a lightbox.</p>
 <!-- You can use this grid of images in any page -->
@@ -2427,7 +2403,9 @@ that are in the CSS.
 
 </section>
 
-<section id="portfolio">
+
+
+
 <!--
 =======================================
 PORTFOLIO
@@ -2437,6 +2415,7 @@ that are in the CSS.
 - The "cover" image was inserted directly into the tag below, without the use of
 CSS. It is a better option when the image does not repeat.
 -->
+<section id="portfolio">
 
 <div class="slides">
   <figure>
@@ -2464,24 +2443,30 @@ CSS. It is a better option when the image does not repeat.
 
 </section>
 
-<section id="another-page">
+
+
+
 <!--
 =======================================
 ANOTHER PAGE
 =======================================
 -->
+<section id="another-page">
 
 <p>This page is not referenced in the menu, yet it exists.</p>
 <footer><a href="#about">← back</a></footer>
 
 </section>
 
-<section id="to-last">
+
+
+
 <!--
 =======================================
 DESIGNED TO LAST
 =======================================
 -->
+<section id="to-last">
 
 <h2>Designed To Last</h2>
 
@@ -2490,7 +2475,9 @@ DESIGNED TO LAST
 <li>Return to default HTML/CSS</li>
 <li>Don't minimize this HTML</li>
 <li>Prefer one page over several</li>
-<li>End all forms of hotlinking</li>
+<li>End all forms of
+  <a href="https://simple.wikipedia.org/wiki/Hotlinking">hotlinking</a>
+</li>
 <li>Use native fonts</li>
 <li>Compress your images obsessively</li>
 <li>Eliminate the risk of broken URL</li>
@@ -2510,12 +2497,63 @@ DESIGNED TO LAST
 </section>
 
 
+
+
+<!--
+=======================================
+HOME
+=======================================
+The home section (first) must be the last one -->
+<section id="home">
+
+<p>This is the homepage, displayed by default.</p>
+
+<h1>About me</h1>
+<p>I am a Research Scientist at Spotify in Boston. Before that, I completed my PhD in Computer Science, at <a href="http://www.brown.edu/">Brown University</a>, where I was fortunate to be advised by <a href="http://www.jeffhuang.com">Jeff Huang</a>, and I was a part of the <a href="http://hci.cs.brown.edu/">Human-Computer Interaction research group</a>. My research interests are in human-computer interaction and personal informatics with a special focus on sleep-tracking and self-experiments.</p>
+</div>
+
+<h2>Updates</h2>
+<p>December 2021: Our paper with summer intern <a href="https://savvaspetridis.github.io/">Savvas Petridis</a> was accepted to <a href="https://iui.acm.org/2022/paperList.html">IUI'22</a>.<br>
+December 2020: The <a href="pdfs/Self_E__CHI_2021.pdf">Self-E paper</a> (the last chapter of my thesis!) was accepted to CHI 2021.<br>
+July 2020: I started as a Research Scientist at Spotify. <br>
+May 24, 2020: I graduated from my PhD.<br>
+April 9, 2020: I defended my thesis!</p>
+
+<h2>Research Projects</h2>
+<p><a href="http://selfe.cs.brown.edu"><strong>Self-E</strong>:</a> a self-experimentation app that helps users optimize various aspects of their lives.<br>
+<a href="http://selfe.cs.brown.edu">Website</a> - <a href="https://play.google.com/store/apps/details?id=edu.brown.hci.selfe">Android App</a> - <a href="https://apps.apple.com/us/app/self-e/id1527728955#?platform=iphone">iOS App</a></p>
+
+<p><a href="https://medium.com/@brown.university.hci/sleepcoacher-how-to-complete-your-2019-resolution-to-sleep-better-one-self-experiment-at-a-time-a6237ce2ec3c"><strong>SleepBandits</strong> (a.k.a. SleepCoacher 2.0):</a> a self-experimentation app that helps users optimize their sleep.<br>
+<a href="http://sleep.cs.brown.edu">Website</a> - <a href="https://play.google.com/store/apps/details?id=edu.brown.sleepcoacher&hl=en_US">Android App</a> - <a href="https://apps.apple.com/us/app/sleepcoacher/id1446980859">iOS App</a></p>
+
+<h2>Publications</h2>
+
+<p><strong>Self-E: Smartphone- Supported Guidance for Customizable Self-Experimentation.</strong><br>
+<em>Nediyana Daskalova</em>, Eindra Kyi*, Kevin Ouyang*, Arthur Borem, Sally Chen, Sung Hyun Park, Nicole Nugent, and Jeff Huang. ACM Conference on Human Factors in Computing Systems (<strong>CHI 2021</strong>) 
+<a href="pdfs/Self_E__CHI_2021.pdf">PDF</a> - 
+<a href="https://youtu.be/KQwozp6sOJcA">Video</a></p>
+
+<p><strong>SleepBandits: Guided Flexible Self-Experiments for Sleep.</strong><br>
+<em>Nediyana Daskalova</em></font>, Jina Yoon, Lisa Wang, Cintia Araujo, Guillermo Beltran, Nicole Nugent, John McGeary, Joseph Jay Williams, Jeff Huang. ACM Conference on Human Factors in Computing Systems (<strong>CHI 2020</strong>)
+<a href="https://jeffhuang.com/papers/SleepBandits_CHI20.pdf">PDF</a> -
+<a href="https://youtu.be/6VAwm-riP_A">Video</a></p>
+
+
+<footer>
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fefurlanm.github.io%2Fjohn-doe.html">Valid HTML</a>
+<a href="#to-last">This page is designed to last</a>
+</footer>
+
+</section>
+
+
 <!--
 Add more pages here
 -->
 
 
 </main>
+
 
 <!--
 =======================================

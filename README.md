@@ -1,6 +1,6 @@
 # Single-File HTML Website Template
 
-*Last edited: 2023-07-08*
+*Last edited: 2024-12-04*
 
 This is my version of the John Doe template by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 120 kB. 
 
@@ -71,25 +71,23 @@ The example contained in the template has external links that appear with an arr
 The John Doe template complies with Jeff Huang's 7 guidelines from [This Page is Designed to Last](https://jeffhuang.com/designed_to_last/):
 
 1. Return to vanilla HTML/CSS
-   - Does not have JavaScript, and passes the https://validator.w3.org/
+      - Does not have JavaScript, and passes the https://validator.w3.org/
 2. Don't minimize that HTML
-   - Neither the CSS nor the HTML is minimized and an attempt has also been made to comment out the HTML code to make it readable, although much can still be done to improve it
+      - Neither the CSS nor the HTML is minimized and an attempt has also been made to comment out the HTML code to make it readable, although much can still be done to improve it
 3. Prefer one page over several
-   - It's a single HTML file and everything is inside this single file, there is no other external file
+      - It's a single HTML file and everything is inside this single file, there is no other external file
 4. End all forms of hotlinking
-   - There are no images from other websites, the CSS is part of the file and is not externally linked, it does not use Google Analytics, nor any type of hotlink
+      - There are no images from other websites, the CSS is part of the file and is not externally linked, it does not use Google Analytics, nor any type of hotlink
 5. Stick with native fonts
-   - There are no external fonts, and only generic font families are used
+      - There are no external fonts, and only generic font families are used
 6. Obsessively compress your images
-   - All example images contained in the template use base64 webp format, and are at the minimum size
+      - All example images contained in the template use base64 webp format, and are at the minimum size
 7. Eliminate the broken URL risk
-   - At the moment the site is hosted on Github which I think is stable and will always be online, but using a [monitoring service](https://geekflare.com/monitor-website-uptime/) is always a good idea. And on the other hand, since it's a single HTML file, it can be easily downloaded and stored offline, so it should be relatively easy to preserve
+      - At the moment the site is hosted on Github which I think is stable and will always be online, but using a [monitoring service](https://geekflare.com/monitor-website-uptime/) is always a good idea. And on the other hand, since it's a single HTML file, it can be easily downloaded and stored offline, so it should be relatively easy to preserve
 
 What I found most interesting is its simplicity, being able to open a single file using a simple text editor, make all the necessary changes, save and that's it. If I want to copy some part of a file to another, just open them in any text editor, copy (Ctrl+C) and paste (Ctrl+V), save and that's it. And in the future, when I need to use the file again, it's all there, all in one easy-to-find file. For small websites and simple pages, it's perfect.
 
 ## Files
 
-- john-doe_v0.1.html : original file with some minor fixes like links
-- index.html : single HTML file without external dependencies
-- john-doe-minimal.html : stripped version with few comments, without images, trying to make the working principle clear
-- *.md : Markdown files used with MarkText that can be deleted if no longer needed
+- jonn-doe.html: single file HTML template
+- profile: example
