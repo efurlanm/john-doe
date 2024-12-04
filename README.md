@@ -2,7 +2,11 @@
 
 *Last edited: 2024-12-04*
 
-This is my version of the John Doe template by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies, occupying only 120 kB. 
+This is my version of the John Doe template by Gregory Cadars, a complete and simple website contained in a single HTML file including CSS, images and content, without JavaScript or external dependencies. 
+
+* Template: https://efurlanm.github.io/john-doe
+* Example: https://efurlanm.github.io/john-doe/profile.html
+
 
 Based on:
 
@@ -89,5 +93,5 @@ What I found most interesting is its simplicity, being able to open a single fil
 
 ## Files
 
-- jonn-doe.html: single file HTML template
-- profile: example
+- index.html: single file HTML template
+- profile.html: example
