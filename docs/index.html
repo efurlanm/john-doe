@@ -10,7 +10,7 @@
 <!--
 Single File HTML Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Last edited: 2024-12-04
+Last edited: 2024-12-05
 
 Based on:
   - github.com/cadars/john-doe/
@@ -74,13 +74,14 @@ http://www.catb.org/~esr/html-hell.html .
   --color-border-muted: hsla(210,18%,87%,1);
 }
 
-@media (prefers-color-scheme: dark) {
+/*To be used it needs to be completed and tested.*/
+/*@media (prefers-color-scheme: dark) {
   * {
     --textcolor: #dadada;
     --bgcolor: #141414;
     --highlight: #ffc400;
   }
-}
+}*/
 
 body {
   font-size: 1.125em;  /* 18px */
@@ -721,6 +722,7 @@ ABOUT
 -->
 <section id="about">
 
+<h2>About</h2>
 <p>This is the about page. <a href="#another-page">This is a link to another page</a>.</p>
 <!--<figure>
   <a href="#img-about">
@@ -779,10 +781,10 @@ to <code>code</code></a></p>
 </article>
 
 
-<!-- ARTICLE 20010101 -->
+<!-- ARTICLE 20010101b -->
 <article>
 
-<h2 id="20010101">Lorem ipsum
+<h2 id="20010101b">Lorem ipsum
   <time datetime="2001-01-01">01.01.2001</time></h2>
 <h3>Abstract</h3>
 <p>We introduce physics informed neural networks – neural networks that are trained to solve supervised learning tasks while respecting any given law of physics described by general nonlinear partial differential equations. We present our developments in the context of solving two main classes of problems: data-driven solution and data-driven discovery of partial differential equations. Depending on the nature and arrangement of the available data, we devise two distinct classes of algorithms, namely continuous time and discrete time models. The resulting neural networks form a new class of data-efficient universal function approximators that naturally encode any underlying physical laws as prior information. In the first part, we demonstrate how these networks can be used to infer solutions to partial differential equations, and obtain physics-informed surrogate models that are fully differentiable with respect to all input coordinates and free parameters. In the second part, we focus on the problem of data-driven discovery of partial differential equations.</p>
@@ -1263,9 +1265,9 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10"/&gt;&lt;/a&gt;
    [test]:
    <a href="http://google.com/">http://google.com/</a> "Google"
 </p>
-<h1>
+<h2>
    <a id="user-content-a-heading" href="#a-heading" aria-hidden="true"></a>A heading
-</h1>
+</h2>
 <p>Just a note, I've found that I can't test my markdown parser vs others. For example, both markdown.js and showdown code blocks in lists wrong. They're also completely [inconsistent][test] with regards to paragraphs in list items.</p>
 <p>A link. Not anymore.</p>
 <p></p>
@@ -1519,9 +1521,9 @@ Lots of it...
    </blockquote>
    <p>foo</p>
 </blockquote>
-<h1>
+<h2>
    <a id="user-content-markdown-syntax" href="#markdown-syntax" aria-hidden="true"></a>Markdown: Syntax
-</h1>
+</h2>
 <ul id="user-content-ProjectSubmenu">
    <li>
       <a href="/tylerlong/github-markdown-css-demo/blob/master/projects/markdown" title="Markdown Project Page">Main</a>
@@ -2381,6 +2383,7 @@ that are in the CSS.
 -->
 <section id="photos">
 
+<h2>Photos</h2>
 <p>An example of a photo gallery with a lightbox.</p>
 <!-- You can use this grid of images in any page -->
 <div class="grid">
@@ -2417,6 +2420,7 @@ CSS. It is a better option when the image does not repeat.
 -->
 <section id="portfolio">
 
+<h2>Portfolio</h2>
 <div class="slides">
   <figure>
     <img loading="lazy" alt="webp700x600" class="webp700x600" src="data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==">
@@ -2453,6 +2457,7 @@ ANOTHER PAGE
 -->
 <section id="another-page">
 
+<h2>Anoter Page</h2>
 <p>This page is not referenced in the menu, yet it exists.</p>
 <footer><a href="#about">← back</a></footer>
 
@@ -2469,7 +2474,6 @@ DESIGNED TO LAST
 <section id="to-last">
 
 <h2>Designed To Last</h2>
-
 <p>7 guidelines from <a href="http://jeffhuang.com/designed_to_last/">Designed to Last by Jeff Huang</a> (2023-02-20):</p>
 <ol>
 <li>Return to default HTML/CSS</li>
@@ -2506,10 +2510,11 @@ HOME
 The home section (first) must be the last one -->
 <section id="home">
 
+<h2>Home</h2>
 <p>This is the homepage, displayed by default.</p>
 
 <footer>
-<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fefurlanm.github.io%2Fjohn-doe.html">Valid HTML</a>
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fefurlanm.github.io%2Fjohn-doe">Valid HTML</a>
 <a href="#to-last">This page is designed to last</a>
 </footer>
 
