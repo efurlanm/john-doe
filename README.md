@@ -93,5 +93,5 @@ What I found most interesting is its simplicity, being able to open a single fil
 
 ## Files
 
-- index.html: single file HTML template
-- profile.html: example
+- docs/index.html: single file HTML template
+- docs/profile.html: example
