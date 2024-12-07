@@ -1,55 +1,45 @@
+<!--Single File HTML Website Template. Last edited: 2024-12-07-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Single file HTML template</title>
+<title>Single File HTML Website Template</title>
 <meta name="description" content="Site description">
 
 <!--
-Single File HTML Template
-~~~~~~~~~~~~~~~~~~~~~~~~~
-Last edited: 2024-12-05
-
 Based on:
-  - github.com/cadars/john-doe/
-  - github.com/jhvanderschee/zengardenwebsites
-  - css-tricks.com/a-whole-website-in-a-single-html-file
-  - stackoverflow.com/questions/66522759/how-exactly-does-the-css-in-the-john-doe-no-js-webpage-manage-to-make-the-defaul
-  - and others
+- github.com/cadars/john-doe/
+- github.com/jhvanderschee/zengardenwebsites
+- css-tricks.com/a-whole-website-in-a-single-html-file
+- stackoverflow.com/questions/66522759/how-exactly-does-the-css-in-the-john-doe-no-js-webpage-manage-to-make-the-defaul
+- and others
 
 GENERAL NOTES
 
 - Main rule: keep comments up to date and clean.
-
 - To edit the complete file I am using Kate (https://kate-editor.org/) which has features like code folding which is very useful.
-
 - The html indentation has been suppressed to make it easier to, for example, cut and paste from MarkText (the Markdown editor I'm using, http://github.com/marktext/marktext).
-
 - Only some parts were edited with MarkText, which has a copy and paste feature that transforms into html format.
-
 - All images were first converted to base64 to be inserted inline in this file.
-
 - Always validate the HTML file using the W3C Markup Validation Service https://validator.w3.org/ .
-
 - It's always a good idea to format your code, or part of it, to make it readable, using services like https://codebeautify.org/htmlviewer/ .
-
 - Some of the main html resources used (nav, section, article, header, and others), are described at https://www.w3schools.com/html/html5_semantic_elements.asp .
-
 - As an example, the Hugo-coder theme (https://github.com/luizdepra/hugo-coder/) is similar to the theme used, and several ideas can be used.
-
 - The main idea of this template is to try to make it as readable as possible and easy to maintain, but it is necessary to take some precautions: https://app.works/good-comments-vs-bad-comments/ .
-
 - There are other specific notes in the middle of the html below.
 -->
 
 
-<!--
-=======================================
-CSS
-=======================================
-- The CSS can be changed, but the idea is to keep it as simple as possible.
+
+
+<!--------------------------------------------------------------------+
+|                                                                     |
+|                             CSS                                     |
+|                                                                     |
++---------------------------------------------------------------------
+- The idea is to try to keep it as readable as possible.
 - Always check that it works well on mobile devices and other browsers.
 - A page that I think is important to read before messing with CSS is
 http://www.catb.org/~esr/html-hell.html .
@@ -57,12 +47,13 @@ http://www.catb.org/~esr/html-hell.html .
 <style id="css">
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;  /* turn on the website padding and border */
+  /* https://www.reddit.com/r/css/comments/ryas3o/why_does_peope_use_margin_0_padding_0_explain_in/ */
+  margin: 0;   padding: 0;
+  /* turn on the website padding and border */
+  box-sizing: border-box;
   /* Color scheme. Some places to find colors:
-    https://encycolorpedia.com
-    https://www.w3schools.com/colors/ */
+     https://encycolorpedia.com
+     https://www.w3schools.com/colors/ */
   --textcolor: #121212;  /* very dark shade of gray (X11 gray7) */
   --bgcolor: #fff;  /* white */
   --highlight: #2749c9;  /* Blue Blue Color */
@@ -75,48 +66,58 @@ http://www.catb.org/~esr/html-hell.html .
 }
 
 /*To be used it needs to be completed and tested.*/
-/*@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   * {
     --textcolor: #dadada;
     --bgcolor: #141414;
     --highlight: #ffc400;
   }
-}*/
+} */
+
+/* Font size, in 'em', relative to 16px.
+px  em
+10  0.625
+12  0.75
+14  0.875
+16  1
+18  1.125
+20  1.25
+22  1.375
+24  1.5
+28  1.75
+30  1.875 */
 
 body {
-  font-size: 1.125em;  /* 18px */
+  font-size: 1em;  /* 18px */
   line-height: 1.5;  /* number that will be multiplied with the current font-size to set the line height */
   font-family: system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   color: var(--textcolor);
   background: var(--bgcolor);
   position: relative;  /* turn on the website padding and border */
-  max-width: 64em;  /* remove this for a full-width layout */
+  max-width: 48em;  /* remove this for a full-width layout */
   margin: 0 auto;  /* centers the layout */
 }
 
 /*--- Sections(pages) -------------------*/
 
-/* This is the trick to show (one) pages */
-
 section:target {  /* this is the trick to show (one) pages */
+  display: block;
+}
+
+/* #home must have at least one section before it */
+section#home {  /* show #home page by default */
   display: block;
 }
 
 section:target ~ section:not(#random), section {
   display: none;  /* this is the trick to hide (all) pages */
-  padding: calc(6em + 5vw) 5vw 8vw 5vw;
+  /* calc(6em + 5vw); → space between header and body */
+  padding: calc(6em + 5vw) 1em 5vw 1em;  /* top, right, bottom, left */
 }
 
-/* must be not the first one (at least one section before it) */
-section#home {  /* show #home page by default */
-  display: block;
-}
-
-/*--- Header ----------------------------*/
-
-header {
-  padding: 5vw 5vw 0 5vw;  /* top, right, bottom, left */
+header {  /* page header */
+  padding: 5vw 1em 0 1em;  /* top, right, bottom, left */
   display: flex;
   flex-wrap: wrap;
   position: absolute;
@@ -124,7 +125,16 @@ header {
   z-index: 2;  /* www.w3schools.com/cssref/pr_pos_z-index.php */
 }
 
+p, ul, ol, article {  /* paragraphs, unordered and ordered lists */
+  /*max-width: 80ch;*/ /* Limit line-length to 80 characters */
+  hyphens: auto;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+/*--- Headers ---------------------------*/
 /* font-weight: https://cssreference.io/property/font-weight/ */
+
 header h1 {
   font-size: 1.75em;
   font-weight: 700;
@@ -169,7 +179,7 @@ nav a:not(:last-of-type) {
 /*--- Footer ----------------------------*/
 
 footer {  /* footer for a document or section */
-  font-size: 0.888889em;
+  font-size: 0.875em;
   text-align: right;
   padding-top: 4em;
 }
@@ -187,11 +197,6 @@ a {  /* hyperlinks */
 
 a:hover {
   border-bottom: 1px solid;
-}
-
-p, ul, ol, article {  /* paragraphs, unordered and ordered lists */
-  max-width: 90ch; /* Limit line-length to 80 characters */
-  margin-bottom: 1em;
 }
 
 ul {  /* unordered lists */
@@ -215,7 +220,7 @@ b, strong {  /* bold */
 }
 
 small {
-  font-size: 0.888889em;
+  font-size: 0.875em;
 }
 
 hr {  /* horizontal rule */
@@ -224,6 +229,17 @@ hr {  /* horizontal rule */
   background: currentColor;
   opacity: 0.1;
   margin: 1.2em 0;
+}
+
+hr::before {
+  display: table;
+  content: "";
+}
+
+hr::after {
+  display: table;
+  clear: both;
+  content: "";
 }
 
 blockquote {  /* section that is quoted from another source */
@@ -263,7 +279,7 @@ a code {  /* hyperlinks with code */
 }
 
 pre, textarea {  /* for code samples */
-  font-size: 0.888889em;
+  font-size: 0.875em;
   color: inherit;
   line-height: inherit;
   padding: 0.6em 0.9em;  /* top and bottom, right and left */
@@ -282,17 +298,6 @@ pre, textarea {  /* for code samples */
 /*--- Tables ----------------------------*/
 
 /* Adapted from: https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown.css */
-
-hr::before {
-  display: table;
-  content: "";
-}
-
-hr::after {
-  display: table;
-  clear: both;
-  content: "";
-}
 
 table {
   margin-top: 0;
@@ -337,7 +342,7 @@ label {
   cursor: pointer;
   vertical-align: super;
   line-height: 1;
-  font-size: 0.888889em;
+  font-size: 0.875em;
   padding-left: 0.1em;
 }
 
@@ -370,7 +375,7 @@ figure {
 
 figure figcaption {
   margin: 0.8em 0 0 0;
-  font-size: 0.888889em;
+  font-size: 0.875em;
   opacity: 0.7;
 }
 
@@ -385,7 +390,7 @@ section:target iframe {
  
 a[href*="//"]:after
 {
-  font-size: 0.888889em;
+  font-size: 0.875em;
   font-weight: 300;  /* light */
   color: var(--textcolor);
   opacity: 0.5;
@@ -450,7 +455,7 @@ article h2 {
 }
 
 article time {
-  font-size: 0.777778em;
+  font-size: 0.75em;
   margin-left: 0.6em;
   font-weight: normal; /* 400 */
   opacity: 0.7;
