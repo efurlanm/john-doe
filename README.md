@@ -47,5 +47,5 @@ What I found most interesting is its simplicity, being able to open a single fil
 ## Files
 
 - [docs/index.html](docs/index.html) - main single file HTML template.
-- [docs/profile.html](docs/profile.html) - example based on [Nediyana's profile](https://nediyana.github.io)). The original html was converted to markdown (md) using <https://htmlmarkdown.com/>. The md was edited using MarkText. The "Copy as HTML" feature was used to copy and paste into profile.html. The image was converted to base64 using [base64](https://askubuntu.com/questions/178521/how-can-i-decode-a-base64-string-from-the-command-line).
+- [docs/profile.html](docs/profile.html) - example based on [Nediyana's profile](https://nediyana.github.io)). The original html was converted to markdown (md) using [htmlmarkdown](https://htmlmarkdown.com). The md was edited using MarkText. The "Copy as HTML" feature was used to copy and paste into profile.html. The image was converted to base64 using [base64](https://askubuntu.com/questions/178521/how-can-i-decode-a-base64-string-from-the-command-line).
 - [docs/profile.md](docs/profile.md) - the md file used in the MarText editor.
