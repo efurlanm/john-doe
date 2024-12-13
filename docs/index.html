@@ -1,4 +1,4 @@
-<!--Single File HTML Website Template. Last edited: 2024-12-07-->
+<!--Single file HTML website template. Last edited: 2024-12-13-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Single File HTML Website Template</title>
 <meta name="description" content="Site description">
+
+
 
 <!--
 Based on:
@@ -33,18 +35,18 @@ GENERAL NOTES
 
 
 
-
-<!--------------------------------------------------------------------+
+<style id="css">
+/*--------------------------------------------------------------------+
 |                                                                     |
 |                             CSS                                     |
 |                                                                     |
-+---------------------------------------------------------------------
++---------------------------------------------------------------------+
 - The idea is to try to keep it as readable as possible.
 - Always check that it works well on mobile devices and other browsers.
 - A page that I think is important to read before messing with CSS is
 http://www.catb.org/~esr/html-hell.html .
--->
-<style id="css">
+*/
+
 
 * {
   /* https://www.reddit.com/r/css/comments/ryas3o/why_does_peope_use_margin_0_padding_0_explain_in/ */
@@ -61,7 +63,6 @@ http://www.catb.org/~esr/html-hell.html .
   --color-border-default: #d0d7de;
   --color-canvas-default: #ffffff;
   --color-canvas-subtle: #f6f8fa;
-  --color-border-default: #d0d7de;
   --color-border-muted: hsla(210,18%,87%,1);
 }
 
@@ -88,7 +89,7 @@ px  em
 30  1.875 */
 
 body {
-  font-size: 1em;  /* 18px */
+  font-size: 1em;  /* 16px */
   line-height: 1.5;  /* number that will be multiplied with the current font-size to set the line height */
   font-family: system-ui, sans-serif;
   text-rendering: optimizeLegibility;
@@ -132,6 +133,10 @@ p, ul, ol, article {  /* paragraphs, unordered and ordered lists */
   margin-bottom: 1em;
 }
 
+nav a:not(:last-of-type) {
+  margin-right: 1.5vw;  /* spacing */
+}
+
 /*--- Headers ---------------------------*/
 /* font-weight: https://cssreference.io/property/font-weight/ */
 
@@ -140,21 +145,20 @@ header h1 {
   font-weight: 700;
   flex: 1;  /* pushes nav to the right */
   white-space: nowrap;
-  padding: 0 5vw 0.3em 0; /* top, right, bottom, left */
+  padding: 0 5vw 0.3em 0;  /* top, right, bottom, left */
 }
 
 section h1 {  /* section heading */
   font-size: 1.75em;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.54);
-  margin: 0 0 0.57143em 0; /* top, right, bottom, left */
+  margin: 0 0 0.57143em 0;  /* top, right, bottom, left */
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.87);
-  /* 1.6em 0 0.6em 0 */
   margin: 1.666667em 0 0.666667em 0;  /*top,right,bottom,left */
 }
 
@@ -169,23 +173,7 @@ h4 {
   font-size: 1em;
   font-weight: 700;
   color: rgba(0, 0, 0, 0.87);
-  margin: 1em 0 1em 0;  /*top, right, bottom, left */
-}
-
-nav a:not(:last-of-type) {
-  margin-right: 1.5vw;  /* spacing */
-}
-
-/*--- Footer ----------------------------*/
-
-footer {  /* footer for a document or section */
-  font-size: 0.875em;
-  text-align: right;
-  padding-top: 4em;
-}
-
-footer a:not(:last-of-type) {
-  margin-right: 1.5vw;  /* spacing */
+  margin: 1.375em 0 1em 0;  /*top, right, bottom, left */
 }
 
 /*--- General ---------------------------*/
@@ -336,13 +324,25 @@ table img {
   background-color: transparent;
 }
 
+/*--- Footer ----------------------------*/
+
+footer {  /* footer for a document or section */
+  font-size: 0.75em;
+  text-align: right;
+  padding-top: 6em;
+}
+
+footer a:not(:last-of-type) {
+  margin-right: 1.5vw;  /* spacing */
+}
+
 /*--- Inline footnotes ------------------*/
 
 label {
   cursor: pointer;
   vertical-align: super;
   line-height: 1;
-  font-size: 0.875em;
+  font-size: 0.75em;
   padding-left: 0.1em;
 }
 
@@ -390,12 +390,11 @@ section:target iframe {
  
 a[href*="//"]:after
 {
-  font-size: 0.875em;
+  font-size: 0.75em;
   font-weight: 300;  /* light */
   color: var(--textcolor);
   opacity: 0.5;
-  /* \2197 ↗ 🔗 */
-  content: "↗"; /* top right arrow: ↗ */
+  content: "↗"; /* top right arrow: ↗ \2197 */
 }
 
 a[href*="//"]:hover:after
@@ -608,16 +607,19 @@ article time {
 </style>
 
 
+
+<style id="images">
 <!--
 =======================================
 IMAGES
 =======================================
-- Images don't need to be placed in the CSS this way, they can be inserted
-directly into the corresponding tags. Only in this specific case, as there was
-repetition of images, it was decided to place them in this way.
-- Some browsers may have problems with this approach, so it's best to avoid.
+- Images don't need to be placed in the CSS this way, they can be
+  inserted directly into the corresponding tags. Only in this specific
+  case, as there was repetition of images, it was decided to place them
+  in this way.
+- Some browsers may have problems with this approach, so it's best to
+  avoid.
 -->
-<style id="images">
 
 .webp48{
   width: 48px;
@@ -694,11 +696,16 @@ repetition of images, it was decided to place them in this way.
 
 </style>
 
+
+
 </head>
 
 
 <body>
 
+
+
+<header id="toolbar">
 <!--
 =======================================
 TOOLBAR
@@ -706,7 +713,7 @@ TOOLBAR
 - The idea here is to try to keep it as simple as possible, if you have to add
 something it might be better to do it within a page.
 -->
-<header id="toolbar">
+
 <h1><a href="#home">Site title</a></h1>
 <nav>
 <a href="#about">About</a>
@@ -717,15 +724,16 @@ something it might be better to do it within a page.
 </header>
 
 
+
 <main>
 
 
+<section id="about">
 <!--
 =======================================
 ABOUT
 =======================================
 -->
-<section id="about">
 
 <h2>About</h2>
 <p>This is the about page. <a href="#another-page">This is a link to another page</a>.</p>
@@ -739,18 +747,20 @@ ABOUT
 </section>
 
 
+
+<section id="news">
 <!--
 =======================================
 NEWS
 =======================================
 -->
-<section id="news">
 
 <h2>News</h2>
 <br>
 
-<!-- ARTICLE 20201010 -->
+
 <article>
+<!-- ARTICLE 20201010 -->
 
 <h2 id="20201010">Blogging with Joe Bloggs
   <time datetime="2020-10-10">10.10.2020</time></h2>
@@ -760,8 +770,8 @@ NEWS
 </article>
 
 
-<!-- ARTICLE 20041212 -->
 <article>
+<!-- ARTICLE 20041212 -->
 
 <h2 id="20041212">Why Your Cat Bites You
   <time datetime="2004-12-12">12.12.2004</time></h2>
@@ -776,8 +786,8 @@ to <code>code</code></a></p>
 </article>
 
 
-<!-- ARTICLE 20010101 -->
 <article>
+<!-- ARTICLE 20010101 -->
 
 <h2 id="20010101">Lorem ipsum
   <time datetime="2001-01-01">01.01.2001</time></h2>
@@ -788,8 +798,8 @@ to <code>code</code></a></p>
 </article>
 
 
-<!-- ARTICLE 20010101b -->
 <article>
+<!-- ARTICLE 20010101b -->
 
 <h2 id="20010101b">Lorem ipsum
   <time datetime="2001-01-01">01.01.2001</time></h2>
@@ -799,10 +809,10 @@ to <code>code</code></a></p>
 </article>
 
 
+<article>
 <!-- ARTICLE 20001212
 - Source: https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/index.html
 - This article is just an example -->
-<article>
 
 <h2 id="20001212">Github Markdown CSS <time datetime="2000-12-12">12.12.2000</time></h2>
 <p>Adapted from: <a href="https://github.com/sindresorhus/github-markdown-css"> https://github.com/sindresorhus/github-markdown-css</a></p>
@@ -2372,11 +2382,14 @@ _   underscore
 
 </article>
 
+
+
 </section>
 
 
 
 
+<section id="photos">
 <!--
 =======================================
 PHOTOS
@@ -2388,7 +2401,6 @@ inserted directly into the following tags.
 - The following images are single pixel, only to trigger the background images
 that are in the CSS.
 -->
-<section id="photos">
 
 <h2>Photos</h2>
 <p>An example of a photo gallery with a lightbox.</p>
@@ -2415,7 +2427,7 @@ that are in the CSS.
 
 
 
-
+<section id="portfolio">
 <!--
 =======================================
 PORTFOLIO
@@ -2425,7 +2437,6 @@ that are in the CSS.
 - The "cover" image was inserted directly into the tag below, without the use of
 CSS. It is a better option when the image does not repeat.
 -->
-<section id="portfolio">
 
 <h2>Portfolio</h2>
 <div class="slides">
@@ -2456,13 +2467,12 @@ CSS. It is a better option when the image does not repeat.
 
 
 
-
+<section id="another-page">
 <!--
 =======================================
 ANOTHER PAGE
 =======================================
 -->
-<section id="another-page">
 
 <h2>Anoter Page</h2>
 <p>This page is not referenced in the menu, yet it exists.</p>
@@ -2472,13 +2482,12 @@ ANOTHER PAGE
 
 
 
-
+<section id="to-last">
 <!--
 =======================================
 DESIGNED TO LAST
 =======================================
 -->
-<section id="to-last">
 
 <h2>Designed To Last</h2>
 <p>7 guidelines from <a href="http://jeffhuang.com/designed_to_last/">Designed to Last by Jeff Huang</a> (2023-02-20):</p>
@@ -2509,13 +2518,13 @@ DESIGNED TO LAST
 
 
 
-
+<section id="home">
 <!--
 =======================================
 HOME
 =======================================
-The home section (first) must be the last one -->
-<section id="home">
+- The home section (first) must be the last one.
+-->
 
 <h2>Home</h2>
 <p>This is the homepage, displayed by default.</p>
@@ -2528,12 +2537,15 @@ The home section (first) must be the last one -->
 </section>
 
 
+
 <!--
 Add more pages here
 -->
 
 
+
 </main>
+
 
 
 <!--
@@ -2600,6 +2612,10 @@ work, brings an extra complexity which would be interesting to avoid.
   <img loading="lazy" alt="webp1200x600" class="webp1200x600" src="data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==">
 </a>
 
+
+
 </body>
+
+
 
 </html>
